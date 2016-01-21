@@ -108,68 +108,100 @@ let rec interpret_expr env e =
       in aux list
 
     | Ebinop (op,exp1,exp2) ->
-      match op with
-	| Badd ->
-	  let e1 = get_int exp1.pos (interpret_expr env exp1)
-	  and e2 = get_int exp2.pos (interpret_expr env exp2)
-	  in
-	  Vint (e1+e2)
+      begin
+	match op with
+	  | Badd ->
+	    let e1 = get_int exp1.pos (interpret_expr env exp1)
+	    and e2 = get_int exp2.pos (interpret_expr env exp2)
+	    in
+	    Vint (e1+e2)
+	      
+	  | Bsub ->
+	    let e1 = get_int exp1.pos (interpret_expr env exp1)
+	    and e2 = get_int exp2.pos (interpret_expr env exp2)
+	    in
+	    Vint (e1-e2)
+	      
+	  |Bdiv ->
+	    let e1 = get_int exp1.pos (interpret_expr env exp1)
+	    and e2 = get_int exp2.pos (interpret_expr env exp2)
+	    in
+	    Vint (e1/e2)
+	      
+	  | Bmul ->
+	    let e1 = get_int exp1.pos (interpret_expr env exp1)
+	    and e2 = get_int exp2.pos (interpret_expr env exp2)
+	    in
+	    Vint (e1*e2)
+	      
+	  | Beq ->
+	    let e1 = (interpret_expr env exp1)
+	    and e2 = (interpret_expr env exp2)
+	    in
 	    
-	| Bsub ->
-	  let e1 = get_int exp1.pos (interpret_expr env exp1)
-	  and e2 = get_int exp2.pos (interpret_expr env exp2)
-	  in
-	  Vint (e1-e2)
-	    
-	|Bdiv ->
-	  let e1 = get_int exp1.pos (interpret_expr env exp1)
-	  and e2 = get_int exp2.pos (interpret_expr env exp2)
-	  in
-	  Vint (e1/e2)
-	    
-	| Bmul ->
-	  let e1 = get_int exp1.pos (interpret_expr env exp1)
-	  and e2 = get_int exp2.pos (interpret_expr env exp2)
-	  in
-	  Vint (e1*e2)
-
-	| Beq ->
-	  let e1 = (interpret_expr env exp1)
-	  and e2 = (interpret_expr env exp2)
-	  in
-	  
-	  if ((is_bool e1) && (is_bool e2)) then
+	    if ((is_bool e1) && (is_bool e2)) then
 	      let e1bool = get_bool exp1.pos e1
 	      and e2bool = get_bool exp2.pos e2
 	      in Vbool (e1bool = e2bool)
-	  else if ((is_int e1) && (is_int e2)) then
+	    else if ((is_int e1) && (is_int e2)) then
 	      let e1int = get_int exp1.pos e1
 	      and e2int = get_int exp2.pos e2
 	      in Vbool (e1int = e2int)
-	  else
-	    assert false
-
-	|Bneq ->
-	  let e1 = (interpret_expr env exp1)
-	  and e2 = (interpret_expr env exp2)
-	  in
-	  
-	  if ((is_bool e1) && (is_bool e2)) then
+	    else
+	      assert false
+		
+	  | Bneq ->
+	    let e1 = (interpret_expr env exp1)
+	    and e2 = (interpret_expr env exp2)
+	    in
+	    
+	    if ((is_bool e1) && (is_bool e2)) then
 	      let e1bool = get_bool exp1.pos e1
 	      and e2bool = get_bool exp2.pos e2
 	      in Vbool (e1bool <> e2bool)
-	  else if ((is_int e1) && (is_int e2)) then
+	    else if ((is_int e1) && (is_int e2)) then
 	      let e1int = get_int exp1.pos e1
 	      and e2int = get_int exp2.pos e2
 	      in Vbool (e1int <> e2int)
-	  else
-	    assert false
-	  
-
-	  
-	 
+	    else
+	      assert false
 		
-      
+		
+	  | Blt ->
+	    let e1 = get_int exp1.pos (interpret_expr env exp1)
+	    and e2 = get_int exp2.pos (interpret_expr env exp2)
+	    in
+	    Vbool(e1 < e2)
+	  | Ble ->
+	    let e1 = get_int exp1.pos (interpret_expr env exp1)
+	    and e2 = get_int exp2.pos (interpret_expr env exp2)
+	    in
+	    Vbool(e1 <= e2)
+	      
+	  | Bgt ->
+	    let e1 = get_int exp1.pos (interpret_expr env exp1)
+	    and e2 = get_int exp2.pos (interpret_expr env exp2)
+	    in
+	    Vbool(e1 > e2)
+	  | Bge ->
+	    let e1 = get_int exp1.pos (interpret_expr env exp1)
+	    and e2 = get_int exp2.pos (interpret_expr env exp2)
+	    in
+	    Vbool(e1 >= e2)
+	  | Band ->
+	    let e1 = get_bool exp1.pos (interpret_expr env exp1)
+	    and e2 = get_bool exp2.pos (interpret_expr env exp2)
+	    in
+	    Vbool(e1 && e2)
+	      
+	  | Bor ->
+	    let e1 = get_bool exp1.pos (interpret_expr env exp1)
+	    and e2 = get_bool exp2.pos (interpret_expr env exp2)
+	    in
+	    Vbool(e1 || e2)
+	      
+      end
+	        
     | _ -> not_implemented ()
 
 
