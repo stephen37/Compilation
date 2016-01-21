@@ -1,0 +1,238 @@
+* Mise a Niveau Ocaml
+
+** Programme Type
+     
+  Prog1.ml
+  
+  let f n = n+1;;
+  
+  let affiche n m = Printf.printf "Le successeur de %i est %i \n" n m;;
+  
+  let f 4;;
+
+  Ocaml est statiquement typé (Comme Java, C etc) contrairement à Javascript/Python
+
+** Types de données
+   Concatener deux strings : On utilise ^
+   
+   Il faut penser à rajouter "." après un signe opératoire sur des flottants
+   
+   Les fonctions ont un seul type ! 
+** Priorités 
+   Attention, l'appel de fonction est prioritaire en Ocaml
+
+** Definitions de Fonctions 
+   let fun_name x1 ... xn = expression ;;
+
+   Si on veut que la fonction soit recursive, il faut penser à mettre rec après le let
+   Exemple : 
+   let rec fact n = 
+      if n = 0 then 1 
+      else n * fact(n-1)
+      ;;
+
+   On peut passer une fonction en argument à une autre fonction
+   
+   Ex : 
+     let rec applique_somme f n =
+        if n = 0 then 0 
+	else f n + applique_somme f (n-1)
+	;;
+    Exemple : 
+    let carre n = n * n;;
+    applique_somme carre 10;;
+    Resultat = 385
+
+*** Fonction partielle 
+     On peut appeler une fonction partielle
+     let somme a b c = a +b+c;;
+     let ajout10 = somme 10;;
+     let ajout10_5 = somme 10 5;;
+     ajout 10 1 1 ;;
+     ajout10_5 3;;
+
+
+     Les noms pour les fonctions commencent *toujours par une minuscule*
+*** Variables locales
+     On peut utiliser des variables locales à l'aide du mot clé *in*
+     let varname1 = e1
+        .
+	.
+	.
+     and varnameN = en
+     in e
+
+*** Recursivité mutuelle 
+     Les varnamei ne sont disponible que dans e et non pas dans ei
+     On peut faire des fonctions mutuellement récursives 
+     
+     let rec pair n =
+       if n = 0 then true else 
+       if n = 1 then false else impair(n-1)
+     and impair n =
+       if n = 0 then flase else 
+       if n = 1 then true else pair (n-1)
+       ;;
+     
+*** Types structurées 
+    - tuples
+    - listes
+    - tableaux
+    - Enregistrements
+    - Types perso
+      
+**** Definition de type persos
+     type type_name = type_expr
+     type jour = int ;;
+     type date = jour *  mois * annee --> Renvoie un triplet
+     
+**** Types sommes
+     type type_name = C1 [of type_expr1]
+                      (pipe) C2 [of type_expr2]
+                                          
+                      .
+                      .
+		      .
+                      (pipe) Cn [of type_exprN] 
+
+Les Ci sont des constructeurs de types. Leur nom commence par une *Majuscule*
+
+**** *Match* LE SWITCH D'OCAML
+
+***** Type algébrique
+let string_of_couleur c = 
+   match c with 
+   (pipe) Coeur -> "coeur"
+   (pipe) Pique -> "pique"
+   (pipe) Trefle -> "trefle"
+   (pipe) Carreau -> "carreau"
+;;
+
+
+let string_of_valeur v = 
+   match c with 
+   valet -> "Valet"
+   (pipe) Dame -> "dame"
+   (pipe) Roi -> "roi"
+   (pipe) Valeur(x) ->if x = 1 then "As" 
+                      else string_of_int x ;;
+;;
+
+let compare_val v1 v2 = 
+    match v1, v2 with 
+    (pipe) Valeur(i), Valeur(j) -> 
+      if i < j then -1 else if i = j then 0 else 1 
+    (pipe) Roi, Roi (pipe) Dame,Dame (pipe)  Valet, Valet -> 0
+    (pipe) Roi, _ -> 1
+    (pipe) _,Roi -> -1
+    (pipe) Dame, _ -> 1
+    (pipe) _, Dame -> -1
+    (pipe) Valet, _ -> 1
+    (pipe) _, Valet -> -1
+;;
+
+***** _tuples_
+let paire_int = (1,2);;
+
+let xi = fst paire_int ;; --> 1
+
+let yi = snd paire_int ;; --> 2
+***** _*Polymorphisme*_
+
+fst;;
+- : 'a * 'b -> 'a = <fun>
+La fonction fst est dit *polymorphe*. 'a et 'b sont des *variables de
+type* ('a se lit alpha, 'b Beta ...).
+
+fst peut s'appliquer à n'importe quelle paire, et renvoie une valeur
+qui à le même type que la première composante de la paire.
+
+***** _List_
+*Le type de list est : 'a list*
+let liste1 = [1;2;3];;
+val list1 : int list = [1;2;3];;
+
+L'opérateur *::* permet d'ajouter une nouvelle valeur en tête de liste
+
+let rec longueur l = 
+   match l with 
+   (pipe) [] -> 0
+   (pipe) _ :: r -> 1 + longueur r ;;
+
+type de longueur : 'a list -> int = <fun>`
+
+let rec applique f l = 
+    match l with 
+    (pipe) [] -> []
+    (pipe) p :: r -> (f p) :: (applique f r) ;;
+
+type : applique : ('a -> 'b) -> 'a list -> 'b list = <fun>
+
+applique carre [1;10;5;4];;
+- : int list = [1;100;25;16]
+
+
+*** Traits impératifs 
+**** Références, enregistrements 
+_Si on veut modifier une valeur pour une variable, il faut que cette
+variable soit une référence_
+Comme les struct en C 
+let x = ref ();;
+
+x := !x + 1;;
+x := !x + 2;;
+!x ;;
+
+- : int = 3
+
+*Mutable indique que l'on peut mettre à jour les valeurs*
+
+type point_mod = {mutable x : int, mutable y : int};;
+
+let p = {x =1 ; y =2};;
+
+p.y <- 3 ; p;;
+
+
+Une autre version de factoriel :
+
+let fact_for n = 
+   let accu = ref 1 in 
+      for i = 1 to n do 
+        accu := i * !accu
+      done;
+      !accu
+   ;;
+
+*Pour enchainer les expressions renvoyant unit, il faut utiliser ";".*
+
+
+*** Compilation 
+
+let affiche i = Printf.printf "J'affiche %i", 10;;
+
+
+ocamlc -c a.ml
+ls -> a.ml a.cmo a.cmi main.ml
+ocamlc -o prog a.cmo main.ml
+./prog
+
+*** Modules prédéfinis 
+**** Module List 
+Il contient les opérations sur les listes : List.hd, List.tl,
+List.length ;...
+**** Idem pour Array, String, HashTbl ...
+
+On peut ouvrir un module (comme pour les packages de Java). Ces
+définitions peuvent alors être utilisable sans prefixe
+
+
+Ex :
+List.Length[1;2;3];;
+open List;;
+length [1;2;3];;
+
+
+*** Exceptions 
+*Afin de lever une exception, on utilise raise Not_found* pour
+ l'expression Not_Found
