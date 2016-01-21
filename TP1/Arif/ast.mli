@@ -16,10 +16,10 @@ type binop =
 type node_expr = { expr: expr; pos: position }
 
 and expr =
-  | Econst  of const
+  | Econst  of const (* done *)
   | Eident  of ident
-  | Eunop   of unop        * node_expr
-  | Ebinop  of binop       * node_expr   * node_expr
+  | Eunop   of unop        * node_expr (* done *)
+  | Ebinop  of binop       * node_expr   * node_expr (*done*)
   | Eif     of node_expr   * node_expr   * node_expr
   | Eseq    of node_expr list
   | Eletin  of ident       * node_expr   * node_expr

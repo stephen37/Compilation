@@ -36,7 +36,7 @@ type(
   Ast.position -> value -> bool
 )
 ident(
-  def get_bool "interpreter.ml" 52 1724 1724 "_none_" 1 0 -1
+  def get_bool "interpreter.ml" 45 1396 1396 "_none_" 1 0 -1
 )
 "interpreter.ml" 39 1285 1298 "interpreter.ml" 39 1285 1301
 type(
@@ -110,267 +110,2591 @@ type(
 type(
   bool
 )
-"interpreter.ml" 52 1724 1732 "interpreter.ml" 52 1724 1746
+"interpreter.ml" 45 1396 1400 "interpreter.ml" 45 1396 1407
 type(
-  'a -> Ast.node_expr -> value
+  Ast.position -> value -> int
 )
 ident(
-  def interpret_expr "interpreter.ml" 52 1724 1724 "_none_" 1 0 -1
+  def get_int "interpreter.ml" 51 1493 1493 "_none_" 1 0 -1
 )
-"interpreter.ml" 52 1724 1747 "interpreter.ml" 52 1724 1750
+"interpreter.ml" 45 1396 1408 "interpreter.ml" 45 1396 1411
 type(
-  'a
+  Ast.position
 )
 ident(
-  def env "interpreter.ml" 52 1724 1751 "interpreter.ml" 65 2048 2077
+  def pos "interpreter.ml" 45 1396 1412 "interpreter.ml" 48 1449 1490
 )
-"interpreter.ml" 52 1724 1751 "interpreter.ml" 52 1724 1752
+"interpreter.ml" 45 1396 1412 "interpreter.ml" 45 1396 1413
 type(
-  Ast.node_expr
+  value
 )
 ident(
-  def e "interpreter.ml" 53 1755 1757 "interpreter.ml" 65 2048 2077
+  def v "interpreter.ml" 46 1416 1418 "interpreter.ml" 48 1449 1490
 )
-"interpreter.ml" 53 1755 1763 "interpreter.ml" 53 1755 1764
+"interpreter.ml" 46 1416 1424 "interpreter.ml" 46 1416 1425
 type(
-  Ast.node_expr
+  value
 )
 ident(
-  int_ref e "interpreter.ml" 52 1724 1751 "interpreter.ml" 52 1724 1752
+  int_ref v "interpreter.ml" 45 1396 1412 "interpreter.ml" 45 1396 1413
 )
-"interpreter.ml" 53 1755 1763 "interpreter.ml" 53 1755 1769
+"interpreter.ml" 47 1431 1442 "interpreter.ml" 47 1431 1443
 type(
-  Ast.expr
-)
-"interpreter.ml" 56 1844 1857 "interpreter.ml" 56 1844 1861
-type(
-  Ast.unop
-)
-"interpreter.ml" 56 1844 1863 "interpreter.ml" 56 1844 1864
-type(
-  Ast.node_expr
+  int
 )
 ident(
-  def e "interpreter.ml" 57 1871 1877 "interpreter.ml" 58 1926 1945
+  def b "interpreter.ml" 47 1431 1447 "interpreter.ml" 47 1431 1448
 )
-"interpreter.ml" 56 1844 1850 "interpreter.ml" 56 1844 1865
+"interpreter.ml" 47 1431 1437 "interpreter.ml" 47 1431 1443
 type(
-  Ast.expr
+  value
 )
-"interpreter.ml" 57 1871 1881 "interpreter.ml" 57 1871 1882
+"interpreter.ml" 47 1431 1447 "interpreter.ml" 47 1431 1448
+type(
+  int
+)
+ident(
+  int_ref b "interpreter.ml" 47 1431 1442 "interpreter.ml" 47 1431 1443
+)
+"interpreter.ml" 48 1449 1455 "interpreter.ml" 48 1449 1456
+type(
+  value
+)
+"interpreter.ml" 48 1449 1460 "interpreter.ml" 48 1449 1465
+type(
+  Error.error -> Ast.position -> int
+)
+ident(
+  ext_ref Error.error
+)
+"interpreter.ml" 48 1449 1466 "interpreter.ml" 48 1449 1486
+type(
+  Error.error
+)
+"interpreter.ml" 48 1449 1487 "interpreter.ml" 48 1449 1490
+type(
+  Ast.position
+)
+ident(
+  int_ref pos "interpreter.ml" 45 1396 1408 "interpreter.ml" 45 1396 1411
+)
+"interpreter.ml" 48 1449 1460 "interpreter.ml" 48 1449 1490
+call(
+  tail
+)
+type(
+  int
+)
+"interpreter.ml" 46 1416 1418 "interpreter.ml" 48 1449 1490
+type(
+  int
+)
+"interpreter.ml" 51 1493 1497 "interpreter.ml" 51 1493 1504
+type(
+  value -> bool
+)
+ident(
+  def is_bool "interpreter.ml" 56 1564 1564 "_none_" 1 0 -1
+)
+"interpreter.ml" 51 1493 1505 "interpreter.ml" 51 1493 1506
+type(
+  value
+)
+ident(
+  def e "interpreter.ml" 52 1509 1511 "interpreter.ml" 54 1546 1562
+)
+"interpreter.ml" 52 1509 1517 "interpreter.ml" 52 1509 1518
+type(
+  value
+)
+ident(
+  int_ref e "interpreter.ml" 51 1493 1505 "interpreter.ml" 51 1493 1506
+)
+"interpreter.ml" 53 1524 1536 "interpreter.ml" 53 1524 1537
 type(
   bool
 )
 ident(
-  def b "interpreter.ml" 58 1926 1932 "interpreter.ml" 58 1926 1945
+  def e "interpreter.ml" 53 1524 1541 "interpreter.ml" 53 1524 1545
 )
-"interpreter.ml" 57 1871 1885 "interpreter.ml" 57 1871 1893
+"interpreter.ml" 53 1524 1530 "interpreter.ml" 53 1524 1537
+type(
+  value
+)
+"interpreter.ml" 53 1524 1541 "interpreter.ml" 53 1524 1545
+type(
+  bool
+)
+"interpreter.ml" 54 1546 1552 "interpreter.ml" 54 1546 1553
+type(
+  value
+)
+"interpreter.ml" 54 1546 1557 "interpreter.ml" 54 1546 1562
+type(
+  bool
+)
+"interpreter.ml" 52 1509 1511 "interpreter.ml" 54 1546 1562
+type(
+  bool
+)
+"interpreter.ml" 56 1564 1568 "interpreter.ml" 56 1564 1574
+type(
+  value -> bool
+)
+ident(
+  def is_int "interpreter.ml" 68 1967 1967 "_none_" 1 0 -1
+)
+"interpreter.ml" 56 1564 1575 "interpreter.ml" 56 1564 1576
+type(
+  value
+)
+ident(
+  def e "interpreter.ml" 57 1579 1581 "interpreter.ml" 59 1615 1631
+)
+"interpreter.ml" 57 1579 1587 "interpreter.ml" 57 1579 1588
+type(
+  value
+)
+ident(
+  int_ref e "interpreter.ml" 56 1564 1575 "interpreter.ml" 56 1564 1576
+)
+"interpreter.ml" 58 1594 1605 "interpreter.ml" 58 1594 1606
+type(
+  int
+)
+ident(
+  def e "interpreter.ml" 58 1594 1610 "interpreter.ml" 58 1594 1614
+)
+"interpreter.ml" 58 1594 1600 "interpreter.ml" 58 1594 1606
+type(
+  value
+)
+"interpreter.ml" 58 1594 1610 "interpreter.ml" 58 1594 1614
+type(
+  bool
+)
+"interpreter.ml" 59 1615 1621 "interpreter.ml" 59 1615 1622
+type(
+  value
+)
+"interpreter.ml" 59 1615 1626 "interpreter.ml" 59 1615 1631
+type(
+  bool
+)
+"interpreter.ml" 57 1579 1581 "interpreter.ml" 59 1615 1631
+type(
+  bool
+)
+"interpreter.ml" 68 1967 1975 "interpreter.ml" 68 1967 1989
+type(
+  'a -> Ast.node_expr -> value
+)
+ident(
+  def interpret_expr "interpreter.ml" 68 1967 1967 "_none_" 1 0 -1
+)
+"interpreter.ml" 68 1967 1990 "interpreter.ml" 68 1967 1993
+type(
+  'a
+)
+ident(
+  def env "interpreter.ml" 68 1967 1994 "interpreter.ml" 169 4470 4499
+)
+"interpreter.ml" 68 1967 1994 "interpreter.ml" 68 1967 1995
+type(
+  Ast.node_expr
+)
+ident(
+  def e "interpreter.ml" 69 1998 2000 "interpreter.ml" 169 4470 4499
+)
+"interpreter.ml" 69 1998 2006 "interpreter.ml" 69 1998 2007
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref e "interpreter.ml" 68 1967 1994 "interpreter.ml" 68 1967 1995
+)
+"interpreter.ml" 69 1998 2006 "interpreter.ml" 69 1998 2012
+type(
+  Ast.expr
+)
+"interpreter.ml" 72 2087 2100 "interpreter.ml" 72 2087 2104
+type(
+  Ast.unop
+)
+"interpreter.ml" 72 2087 2106 "interpreter.ml" 72 2087 2107
+type(
+  Ast.node_expr
+)
+ident(
+  def e "interpreter.ml" 73 2114 2120 "interpreter.ml" 74 2169 2188
+)
+"interpreter.ml" 72 2087 2093 "interpreter.ml" 72 2087 2108
+type(
+  Ast.expr
+)
+"interpreter.ml" 73 2114 2124 "interpreter.ml" 73 2114 2125
+type(
+  bool
+)
+ident(
+  def b "interpreter.ml" 74 2169 2175 "interpreter.ml" 74 2169 2188
+)
+"interpreter.ml" 73 2114 2128 "interpreter.ml" 73 2114 2136
 type(
   Ast.position -> value -> bool
 )
 ident(
   int_ref get_bool "interpreter.ml" 39 1285 1289 "interpreter.ml" 39 1285 1297
 )
-"interpreter.ml" 57 1871 1894 "interpreter.ml" 57 1871 1895
+"interpreter.ml" 73 2114 2137 "interpreter.ml" 73 2114 2138
 type(
   Ast.node_expr
 )
 ident(
-  int_ref e "interpreter.ml" 56 1844 1863 "interpreter.ml" 56 1844 1864
+  int_ref e "interpreter.ml" 72 2087 2106 "interpreter.ml" 72 2087 2107
 )
-"interpreter.ml" 57 1871 1894 "interpreter.ml" 57 1871 1899
+"interpreter.ml" 73 2114 2137 "interpreter.ml" 73 2114 2142
 type(
   Ast.position
 )
-"interpreter.ml" 57 1871 1901 "interpreter.ml" 57 1871 1915
+"interpreter.ml" 73 2114 2144 "interpreter.ml" 73 2114 2158
 type(
   'a -> Ast.node_expr -> value
 )
 ident(
-  int_ref interpret_expr "interpreter.ml" 52 1724 1732 "interpreter.ml" 52 1724 1746
+  int_ref interpret_expr "interpreter.ml" 68 1967 1975 "interpreter.ml" 68 1967 1989
 )
-"interpreter.ml" 57 1871 1916 "interpreter.ml" 57 1871 1919
+"interpreter.ml" 73 2114 2159 "interpreter.ml" 73 2114 2162
 type(
   'a
 )
 ident(
-  int_ref env "interpreter.ml" 52 1724 1747 "interpreter.ml" 52 1724 1750
+  int_ref env "interpreter.ml" 68 1967 1990 "interpreter.ml" 68 1967 1993
 )
-"interpreter.ml" 57 1871 1920 "interpreter.ml" 57 1871 1921
+"interpreter.ml" 73 2114 2163 "interpreter.ml" 73 2114 2164
 type(
   Ast.node_expr
 )
 ident(
-  int_ref e "interpreter.ml" 56 1844 1863 "interpreter.ml" 56 1844 1864
+  int_ref e "interpreter.ml" 72 2087 2106 "interpreter.ml" 72 2087 2107
 )
-"interpreter.ml" 57 1871 1900 "interpreter.ml" 57 1871 1922
+"interpreter.ml" 73 2114 2143 "interpreter.ml" 73 2114 2165
 call(
   stack
 )
 type(
   value
 )
-"interpreter.ml" 57 1871 1885 "interpreter.ml" 57 1871 1922
+"interpreter.ml" 73 2114 2128 "interpreter.ml" 73 2114 2165
 call(
   stack
 )
 type(
   bool
 )
-"interpreter.ml" 58 1926 1939 "interpreter.ml" 58 1926 1942
+"interpreter.ml" 74 2169 2182 "interpreter.ml" 74 2169 2185
 type(
   bool -> bool
 )
 ident(
   ext_ref Pervasives.not
 )
-"interpreter.ml" 58 1926 1943 "interpreter.ml" 58 1926 1944
+"interpreter.ml" 74 2169 2186 "interpreter.ml" 74 2169 2187
 type(
   bool
 )
 ident(
-  int_ref b "interpreter.ml" 57 1871 1881 "interpreter.ml" 57 1871 1882
+  int_ref b "interpreter.ml" 73 2114 2124 "interpreter.ml" 73 2114 2125
 )
-"interpreter.ml" 58 1926 1938 "interpreter.ml" 58 1926 1945
+"interpreter.ml" 74 2169 2181 "interpreter.ml" 74 2169 2188
 type(
   bool
 )
-"interpreter.ml" 58 1926 1932 "interpreter.ml" 58 1926 1945
+"interpreter.ml" 74 2169 2175 "interpreter.ml" 74 2169 2188
 type(
   value
 )
-"interpreter.ml" 57 1871 1877 "interpreter.ml" 58 1926 1945
+"interpreter.ml" 73 2114 2120 "interpreter.ml" 74 2169 2188
 type(
   value
 )
-"interpreter.ml" 60 1947 1968 "interpreter.ml" 60 1947 1969
+"interpreter.ml" 76 2190 2203 "interpreter.ml" 76 2190 2209
+type(
+  Ast.unop
+)
+"interpreter.ml" 76 2190 2211 "interpreter.ml" 76 2190 2212
 type(
   Ast.node_expr
 )
 ident(
-  def e "interpreter.ml" 61 1973 1979 "interpreter.ml" 63 2035 2046
+  def e "interpreter.ml" 77 2219 2225 "interpreter.ml" 78 2273 2288
 )
-"interpreter.ml" 60 1947 1953 "interpreter.ml" 60 1947 1969
+"interpreter.ml" 76 2190 2196 "interpreter.ml" 76 2190 2213
 type(
   Ast.expr
 )
-"interpreter.ml" 61 1973 1983 "interpreter.ml" 61 1973 1984
+"interpreter.ml" 77 2219 2229 "interpreter.ml" 77 2219 2230
 type(
-  value
+  int
 )
-"interpreter.ml" 61 1973 1987 "interpreter.ml" 61 1973 2001
+ident(
+  def b "interpreter.ml" 78 2273 2279 "interpreter.ml" 78 2273 2288
+)
+"interpreter.ml" 77 2219 2233 "interpreter.ml" 77 2219 2240
+type(
+  Ast.position -> value -> int
+)
+ident(
+  int_ref get_int "interpreter.ml" 45 1396 1400 "interpreter.ml" 45 1396 1407
+)
+"interpreter.ml" 77 2219 2241 "interpreter.ml" 77 2219 2242
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref e "interpreter.ml" 76 2190 2211 "interpreter.ml" 76 2190 2212
+)
+"interpreter.ml" 77 2219 2241 "interpreter.ml" 77 2219 2246
+type(
+  Ast.position
+)
+"interpreter.ml" 77 2219 2248 "interpreter.ml" 77 2219 2262
 type(
   'a -> Ast.node_expr -> value
 )
 ident(
-  int_ref interpret_expr "interpreter.ml" 52 1724 1732 "interpreter.ml" 52 1724 1746
+  int_ref interpret_expr "interpreter.ml" 68 1967 1975 "interpreter.ml" 68 1967 1989
 )
-"interpreter.ml" 61 1973 2002 "interpreter.ml" 61 1973 2005
+"interpreter.ml" 77 2219 2263 "interpreter.ml" 77 2219 2266
 type(
   'a
 )
 ident(
-  int_ref env "interpreter.ml" 52 1724 1747 "interpreter.ml" 52 1724 1750
+  int_ref env "interpreter.ml" 68 1967 1990 "interpreter.ml" 68 1967 1993
 )
-"interpreter.ml" 61 1973 2006 "interpreter.ml" 61 1973 2007
+"interpreter.ml" 77 2219 2267 "interpreter.ml" 77 2219 2268
 type(
   Ast.node_expr
 )
 ident(
-  int_ref e "interpreter.ml" 60 1947 1968 "interpreter.ml" 60 1947 1969
+  int_ref e "interpreter.ml" 76 2190 2211 "interpreter.ml" 76 2190 2212
 )
-"interpreter.ml" 61 1973 1987 "interpreter.ml" 61 1973 2007
+"interpreter.ml" 77 2219 2247 "interpreter.ml" 77 2219 2269
 call(
   stack
 )
 type(
   value
 )
-"interpreter.ml" 62 2011 2017 "interpreter.ml" 62 2011 2030
+"interpreter.ml" 77 2219 2233 "interpreter.ml" 77 2219 2269
+call(
+  stack
+)
+type(
+  int
+)
+"interpreter.ml" 78 2273 2285 "interpreter.ml" 78 2273 2286
+type(
+  int -> int
+)
+ident(
+  ext_ref Pervasives.( ~- )
+)
+"interpreter.ml" 78 2273 2286 "interpreter.ml" 78 2273 2287
+type(
+  int
+)
+ident(
+  int_ref b "interpreter.ml" 77 2219 2229 "interpreter.ml" 77 2219 2230
+)
+"interpreter.ml" 78 2273 2284 "interpreter.ml" 78 2273 2288
+type(
+  int
+)
+"interpreter.ml" 78 2273 2279 "interpreter.ml" 78 2273 2288
+type(
+  value
+)
+"interpreter.ml" 77 2219 2225 "interpreter.ml" 78 2273 2288
+type(
+  value
+)
+"interpreter.ml" 80 2290 2311 "interpreter.ml" 80 2290 2312
+type(
+  Ast.node_expr
+)
+ident(
+  def e "interpreter.ml" 81 2316 2322 "interpreter.ml" 83 2378 2389
+)
+"interpreter.ml" 80 2290 2296 "interpreter.ml" 80 2290 2312
+type(
+  Ast.expr
+)
+"interpreter.ml" 81 2316 2326 "interpreter.ml" 81 2316 2327
+type(
+  value
+)
+"interpreter.ml" 81 2316 2330 "interpreter.ml" 81 2316 2344
+type(
+  'a -> Ast.node_expr -> value
+)
+ident(
+  int_ref interpret_expr "interpreter.ml" 68 1967 1975 "interpreter.ml" 68 1967 1989
+)
+"interpreter.ml" 81 2316 2345 "interpreter.ml" 81 2316 2348
+type(
+  'a
+)
+ident(
+  int_ref env "interpreter.ml" 68 1967 1990 "interpreter.ml" 68 1967 1993
+)
+"interpreter.ml" 81 2316 2349 "interpreter.ml" 81 2316 2350
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref e "interpreter.ml" 80 2290 2311 "interpreter.ml" 80 2290 2312
+)
+"interpreter.ml" 81 2316 2330 "interpreter.ml" 81 2316 2350
+call(
+  stack
+)
+type(
+  value
+)
+"interpreter.ml" 82 2354 2360 "interpreter.ml" 82 2354 2373
 type(
   unit -> unit
 )
 ident(
   ext_ref Pervasives.print_newline
 )
-"interpreter.ml" 62 2011 2031 "interpreter.ml" 62 2011 2033
+"interpreter.ml" 82 2354 2374 "interpreter.ml" 82 2354 2376
 type(
   unit
 )
-"interpreter.ml" 62 2011 2017 "interpreter.ml" 62 2011 2033
+"interpreter.ml" 82 2354 2360 "interpreter.ml" 82 2354 2376
 call(
   stack
 )
 type(
   unit
 )
-"interpreter.ml" 63 2035 2041 "interpreter.ml" 63 2035 2046
+"interpreter.ml" 83 2378 2384 "interpreter.ml" 83 2378 2389
 type(
   value
 )
-"interpreter.ml" 62 2011 2017 "interpreter.ml" 63 2035 2046
+"interpreter.ml" 82 2354 2360 "interpreter.ml" 83 2378 2389
 type(
   value
 )
-"interpreter.ml" 61 1973 1979 "interpreter.ml" 63 2035 2046
+"interpreter.ml" 81 2316 2322 "interpreter.ml" 83 2378 2389
 type(
   value
 )
-"interpreter.ml" 65 2048 2054 "interpreter.ml" 65 2048 2055
+"interpreter.ml" 85 2391 2408 "interpreter.ml" 85 2391 2409
+type(
+  Ast.node_expr
+)
+ident(
+  def e "interpreter.ml" 86 2414 2420 "interpreter.ml" 88 2488 2499
+)
+"interpreter.ml" 85 2391 2397 "interpreter.ml" 85 2391 2409
 type(
   Ast.expr
 )
-"interpreter.ml" 65 2048 2059 "interpreter.ml" 65 2048 2074
+"interpreter.ml" 86 2414 2424 "interpreter.ml" 86 2414 2425
+type(
+  int
+)
+ident(
+  def i "interpreter.ml" 87 2468 2474 "interpreter.ml" 88 2488 2499
+)
+"interpreter.ml" 86 2414 2428 "interpreter.ml" 86 2414 2435
+type(
+  Ast.position -> value -> int
+)
+ident(
+  int_ref get_int "interpreter.ml" 45 1396 1400 "interpreter.ml" 45 1396 1407
+)
+"interpreter.ml" 86 2414 2436 "interpreter.ml" 86 2414 2437
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref e "interpreter.ml" 85 2391 2408 "interpreter.ml" 85 2391 2409
+)
+"interpreter.ml" 86 2414 2436 "interpreter.ml" 86 2414 2441
+type(
+  Ast.position
+)
+"interpreter.ml" 86 2414 2443 "interpreter.ml" 86 2414 2457
+type(
+  'a -> Ast.node_expr -> value
+)
+ident(
+  int_ref interpret_expr "interpreter.ml" 68 1967 1975 "interpreter.ml" 68 1967 1989
+)
+"interpreter.ml" 86 2414 2458 "interpreter.ml" 86 2414 2461
+type(
+  'a
+)
+ident(
+  int_ref env "interpreter.ml" 68 1967 1990 "interpreter.ml" 68 1967 1993
+)
+"interpreter.ml" 86 2414 2462 "interpreter.ml" 86 2414 2463
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref e "interpreter.ml" 85 2391 2408 "interpreter.ml" 85 2391 2409
+)
+"interpreter.ml" 86 2414 2442 "interpreter.ml" 86 2414 2464
+call(
+  stack
+)
+type(
+  value
+)
+"interpreter.ml" 86 2414 2428 "interpreter.ml" 86 2414 2464
+call(
+  stack
+)
+type(
+  int
+)
+"interpreter.ml" 87 2468 2474 "interpreter.ml" 87 2468 2483
+type(
+  int -> unit
+)
+ident(
+  ext_ref Pervasives.print_int
+)
+"interpreter.ml" 87 2468 2483 "interpreter.ml" 87 2468 2486
+type(
+  int
+)
+ident(
+  int_ref i "interpreter.ml" 86 2414 2424 "interpreter.ml" 86 2414 2425
+)
+"interpreter.ml" 87 2468 2474 "interpreter.ml" 87 2468 2486
+call(
+  stack
+)
+type(
+  unit
+)
+"interpreter.ml" 88 2488 2494 "interpreter.ml" 88 2488 2499
+type(
+  value
+)
+"interpreter.ml" 87 2468 2474 "interpreter.ml" 88 2488 2499
+type(
+  value
+)
+"interpreter.ml" 86 2414 2420 "interpreter.ml" 88 2488 2499
+type(
+  value
+)
+"interpreter.ml" 90 2501 2514 "interpreter.ml" 90 2501 2515
+type(
+  Ast.const
+)
+ident(
+  def c "interpreter.ml" 91 2519 2525 "interpreter.ml" 95 2603 2612
+)
+"interpreter.ml" 90 2501 2507 "interpreter.ml" 90 2501 2515
+type(
+  Ast.expr
+)
+"interpreter.ml" 91 2519 2537 "interpreter.ml" 91 2519 2538
+type(
+  Ast.const
+)
+ident(
+  int_ref c "interpreter.ml" 90 2501 2514 "interpreter.ml" 90 2501 2515
+)
+"interpreter.ml" 92 2544 2552 "interpreter.ml" 92 2544 2553
+type(
+  int
+)
+ident(
+  def x "interpreter.ml" 92 2544 2556 "interpreter.ml" 92 2544 2562
+)
+"interpreter.ml" 92 2544 2547 "interpreter.ml" 92 2544 2553
+type(
+  Ast.const
+)
+"interpreter.ml" 92 2544 2561 "interpreter.ml" 92 2544 2562
+type(
+  int
+)
+ident(
+  int_ref x "interpreter.ml" 92 2544 2552 "interpreter.ml" 92 2544 2553
+)
+"interpreter.ml" 92 2544 2556 "interpreter.ml" 92 2544 2562
+type(
+  value
+)
+"interpreter.ml" 93 2563 2572 "interpreter.ml" 93 2563 2573
+type(
+  bool
+)
+ident(
+  def x "interpreter.ml" 93 2563 2577 "interpreter.ml" 93 2563 2584
+)
+"interpreter.ml" 93 2563 2566 "interpreter.ml" 93 2563 2573
+type(
+  Ast.const
+)
+"interpreter.ml" 93 2563 2583 "interpreter.ml" 93 2563 2584
+type(
+  bool
+)
+ident(
+  int_ref x "interpreter.ml" 93 2563 2572 "interpreter.ml" 93 2563 2573
+)
+"interpreter.ml" 93 2563 2577 "interpreter.ml" 93 2563 2584
+type(
+  value
+)
+"interpreter.ml" 94 2585 2588 "interpreter.ml" 94 2585 2593
+type(
+  Ast.const
+)
+"interpreter.ml" 94 2585 2597 "interpreter.ml" 94 2585 2602
+type(
+  value
+)
+"interpreter.ml" 91 2519 2525 "interpreter.ml" 95 2603 2612
+type(
+  value
+)
+"interpreter.ml" 96 2614 2625 "interpreter.ml" 96 2614 2629
+type(
+  Ast.node_expr list
+)
+ident(
+  def list "interpreter.ml" 97 2633 2639 "interpreter.ml" 104 2915 2932
+)
+"interpreter.ml" 96 2614 2620 "interpreter.ml" 96 2614 2629
+type(
+  Ast.expr
+)
+"interpreter.ml" 97 2633 2647 "interpreter.ml" 97 2633 2650
+type(
+  Ast.node_expr list -> value
+)
+ident(
+  def aux "interpreter.ml" 97 2633 2639 "interpreter.ml" 104 2915 2932
+)
+"interpreter.ml" 97 2633 2651 "interpreter.ml" 97 2633 2655
+type(
+  Ast.node_expr list
+)
+ident(
+  def list "interpreter.ml" 98 2658 2659 "interpreter.ml" 102 2804 2847
+)
+"interpreter.ml" 98 2658 2665 "interpreter.ml" 98 2658 2669
+type(
+  Ast.node_expr list
+)
+ident(
+  int_ref list "interpreter.ml" 97 2633 2651 "interpreter.ml" 97 2633 2655
+)
+"interpreter.ml" 99 2675 2680 "interpreter.ml" 99 2675 2682
+type(
+  Ast.node_expr list
+)
+"interpreter.ml" 99 2675 2686 "interpreter.ml" 99 2675 2694
+type(
+  string -> value
+)
+ident(
+  ext_ref Pervasives.failwith
+)
+"interpreter.ml" 99 2675 2695 "interpreter.ml" 99 2675 2710
+type(
+  string
+)
+"interpreter.ml" 99 2675 2686 "interpreter.ml" 99 2675 2710
+call(
+  tail
+)
+type(
+  value
+)
+"interpreter.ml" 100 2711 2717 "interpreter.ml" 100 2711 2718
+type(
+  Ast.node_expr
+)
+ident(
+  def e "interpreter.ml" 100 2711 2723 "interpreter.ml" 100 2711 2743
+)
+"interpreter.ml" 100 2711 2716 "interpreter.ml" 100 2711 2719
+type(
+  Ast.node_expr list
+)
+"interpreter.ml" 100 2711 2723 "interpreter.ml" 100 2711 2737
+type(
+  'a -> Ast.node_expr -> value
+)
+ident(
+  int_ref interpret_expr "interpreter.ml" 68 1967 1975 "interpreter.ml" 68 1967 1989
+)
+"interpreter.ml" 100 2711 2738 "interpreter.ml" 100 2711 2741
+type(
+  'a
+)
+ident(
+  int_ref env "interpreter.ml" 68 1967 1990 "interpreter.ml" 68 1967 1993
+)
+"interpreter.ml" 100 2711 2742 "interpreter.ml" 100 2711 2743
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref e "interpreter.ml" 100 2711 2717 "interpreter.ml" 100 2711 2718
+)
+"interpreter.ml" 100 2711 2723 "interpreter.ml" 100 2711 2743
+call(
+  tail
+)
+type(
+  value
+)
+"interpreter.ml" 101 2788 2793 "interpreter.ml" 101 2788 2794
+type(
+  Ast.node_expr
+)
+ident(
+  def e "interpreter.ml" 102 2804 2809 "interpreter.ml" 102 2804 2847
+)
+"interpreter.ml" 101 2788 2798 "interpreter.ml" 101 2788 2800
+type(
+  Ast.node_expr list
+)
+ident(
+  def tl "interpreter.ml" 102 2804 2809 "interpreter.ml" 102 2804 2847
+)
+"interpreter.ml" 101 2788 2793 "interpreter.ml" 101 2788 2800
+type(
+  Ast.node_expr list
+)
+"interpreter.ml" 102 2804 2813 "interpreter.ml" 102 2804 2814
+type(
+  value
+)
+"interpreter.ml" 102 2804 2817 "interpreter.ml" 102 2804 2831
+type(
+  'a -> Ast.node_expr -> value
+)
+ident(
+  int_ref interpret_expr "interpreter.ml" 68 1967 1975 "interpreter.ml" 68 1967 1989
+)
+"interpreter.ml" 102 2804 2832 "interpreter.ml" 102 2804 2835
+type(
+  'a
+)
+ident(
+  int_ref env "interpreter.ml" 68 1967 1990 "interpreter.ml" 68 1967 1993
+)
+"interpreter.ml" 102 2804 2836 "interpreter.ml" 102 2804 2837
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref e "interpreter.ml" 101 2788 2793 "interpreter.ml" 101 2788 2794
+)
+"interpreter.ml" 102 2804 2817 "interpreter.ml" 102 2804 2837
+call(
+  stack
+)
+type(
+  value
+)
+"interpreter.ml" 102 2804 2841 "interpreter.ml" 102 2804 2844
+type(
+  Ast.node_expr list -> value
+)
+ident(
+  int_ref aux "interpreter.ml" 97 2633 2647 "interpreter.ml" 97 2633 2650
+)
+"interpreter.ml" 102 2804 2845 "interpreter.ml" 102 2804 2847
+type(
+  Ast.node_expr list
+)
+ident(
+  int_ref tl "interpreter.ml" 101 2788 2798 "interpreter.ml" 101 2788 2800
+)
+"interpreter.ml" 102 2804 2841 "interpreter.ml" 102 2804 2847
+call(
+  tail
+)
+type(
+  value
+)
+"interpreter.ml" 102 2804 2809 "interpreter.ml" 102 2804 2847
+type(
+  value
+)
+"interpreter.ml" 98 2658 2659 "interpreter.ml" 102 2804 2847
+type(
+  value
+)
+"interpreter.ml" 104 2915 2924 "interpreter.ml" 104 2915 2927
+type(
+  Ast.node_expr list -> value
+)
+ident(
+  int_ref aux "interpreter.ml" 97 2633 2647 "interpreter.ml" 97 2633 2650
+)
+"interpreter.ml" 104 2915 2928 "interpreter.ml" 104 2915 2932
+type(
+  Ast.node_expr list
+)
+ident(
+  int_ref list "interpreter.ml" 96 2614 2625 "interpreter.ml" 96 2614 2629
+)
+"interpreter.ml" 104 2915 2924 "interpreter.ml" 104 2915 2932
+call(
+  tail
+)
+type(
+  value
+)
+"interpreter.ml" 97 2633 2639 "interpreter.ml" 104 2915 2932
+type(
+  value
+)
+"interpreter.ml" 106 2934 2948 "interpreter.ml" 106 2934 2950
+type(
+  Ast.binop
+)
+ident(
+  def op "interpreter.ml" 107 2965 2971 "interpreter.ml" 169 4470 4499
+)
+"interpreter.ml" 106 2934 2951 "interpreter.ml" 106 2934 2955
+type(
+  Ast.node_expr
+)
+ident(
+  def exp1 "interpreter.ml" 107 2965 2971 "interpreter.ml" 169 4470 4499
+)
+"interpreter.ml" 106 2934 2956 "interpreter.ml" 106 2934 2960
+type(
+  Ast.node_expr
+)
+ident(
+  def exp2 "interpreter.ml" 107 2965 2971 "interpreter.ml" 169 4470 4499
+)
+"interpreter.ml" 106 2934 2940 "interpreter.ml" 106 2934 2961
+type(
+  Ast.expr
+)
+"interpreter.ml" 107 2965 2977 "interpreter.ml" 107 2965 2979
+type(
+  Ast.binop
+)
+ident(
+  int_ref op "interpreter.ml" 106 2934 2948 "interpreter.ml" 106 2934 2950
+)
+"interpreter.ml" 108 2985 2988 "interpreter.ml" 108 2985 2992
+type(
+  Ast.binop
+)
+"interpreter.ml" 109 2996 3003 "interpreter.ml" 109 2996 3005
+type(
+  int
+)
+ident(
+  def e1 "interpreter.ml" 112 3112 3115 "interpreter.ml" 112 3112 3127
+)
+"interpreter.ml" 109 2996 3008 "interpreter.ml" 109 2996 3015
+type(
+  Ast.position -> value -> int
+)
+ident(
+  int_ref get_int "interpreter.ml" 45 1396 1400 "interpreter.ml" 45 1396 1407
+)
+"interpreter.ml" 109 2996 3016 "interpreter.ml" 109 2996 3020
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp1 "interpreter.ml" 106 2934 2951 "interpreter.ml" 106 2934 2955
+)
+"interpreter.ml" 109 2996 3016 "interpreter.ml" 109 2996 3024
+type(
+  Ast.position
+)
+"interpreter.ml" 109 2996 3026 "interpreter.ml" 109 2996 3040
+type(
+  'a -> Ast.node_expr -> value
+)
+ident(
+  int_ref interpret_expr "interpreter.ml" 68 1967 1975 "interpreter.ml" 68 1967 1989
+)
+"interpreter.ml" 109 2996 3041 "interpreter.ml" 109 2996 3044
+type(
+  'a
+)
+ident(
+  int_ref env "interpreter.ml" 68 1967 1990 "interpreter.ml" 68 1967 1993
+)
+"interpreter.ml" 109 2996 3045 "interpreter.ml" 109 2996 3049
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp1 "interpreter.ml" 106 2934 2951 "interpreter.ml" 106 2934 2955
+)
+"interpreter.ml" 109 2996 3025 "interpreter.ml" 109 2996 3050
+call(
+  stack
+)
+type(
+  value
+)
+"interpreter.ml" 109 2996 3008 "interpreter.ml" 109 2996 3050
+call(
+  stack
+)
+type(
+  int
+)
+"interpreter.ml" 110 3051 3058 "interpreter.ml" 110 3051 3060
+type(
+  int
+)
+ident(
+  def e2 "interpreter.ml" 112 3112 3115 "interpreter.ml" 112 3112 3127
+)
+"interpreter.ml" 110 3051 3063 "interpreter.ml" 110 3051 3070
+type(
+  Ast.position -> value -> int
+)
+ident(
+  int_ref get_int "interpreter.ml" 45 1396 1400 "interpreter.ml" 45 1396 1407
+)
+"interpreter.ml" 110 3051 3071 "interpreter.ml" 110 3051 3075
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp2 "interpreter.ml" 106 2934 2956 "interpreter.ml" 106 2934 2960
+)
+"interpreter.ml" 110 3051 3071 "interpreter.ml" 110 3051 3079
+type(
+  Ast.position
+)
+"interpreter.ml" 110 3051 3081 "interpreter.ml" 110 3051 3095
+type(
+  'a -> Ast.node_expr -> value
+)
+ident(
+  int_ref interpret_expr "interpreter.ml" 68 1967 1975 "interpreter.ml" 68 1967 1989
+)
+"interpreter.ml" 110 3051 3096 "interpreter.ml" 110 3051 3099
+type(
+  'a
+)
+ident(
+  int_ref env "interpreter.ml" 68 1967 1990 "interpreter.ml" 68 1967 1993
+)
+"interpreter.ml" 110 3051 3100 "interpreter.ml" 110 3051 3104
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp2 "interpreter.ml" 106 2934 2956 "interpreter.ml" 106 2934 2960
+)
+"interpreter.ml" 110 3051 3080 "interpreter.ml" 110 3051 3105
+call(
+  stack
+)
+type(
+  value
+)
+"interpreter.ml" 110 3051 3063 "interpreter.ml" 110 3051 3105
+call(
+  stack
+)
+type(
+  int
+)
+"interpreter.ml" 112 3112 3121 "interpreter.ml" 112 3112 3123
+type(
+  int
+)
+ident(
+  int_ref e1 "interpreter.ml" 109 2996 3003 "interpreter.ml" 109 2996 3005
+)
+"interpreter.ml" 112 3112 3123 "interpreter.ml" 112 3112 3124
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"interpreter.ml" 112 3112 3124 "interpreter.ml" 112 3112 3126
+type(
+  int
+)
+ident(
+  int_ref e2 "interpreter.ml" 110 3051 3058 "interpreter.ml" 110 3051 3060
+)
+"interpreter.ml" 112 3112 3120 "interpreter.ml" 112 3112 3127
+type(
+  int
+)
+"interpreter.ml" 112 3112 3115 "interpreter.ml" 112 3112 3127
+type(
+  value
+)
+"interpreter.ml" 109 2996 2999 "interpreter.ml" 112 3112 3127
+type(
+  value
+)
+"interpreter.ml" 114 3134 3137 "interpreter.ml" 114 3134 3141
+type(
+  Ast.binop
+)
+"interpreter.ml" 115 3145 3152 "interpreter.ml" 115 3145 3154
+type(
+  int
+)
+ident(
+  def e1 "interpreter.ml" 118 3261 3264 "interpreter.ml" 118 3261 3276
+)
+"interpreter.ml" 115 3145 3157 "interpreter.ml" 115 3145 3164
+type(
+  Ast.position -> value -> int
+)
+ident(
+  int_ref get_int "interpreter.ml" 45 1396 1400 "interpreter.ml" 45 1396 1407
+)
+"interpreter.ml" 115 3145 3165 "interpreter.ml" 115 3145 3169
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp1 "interpreter.ml" 106 2934 2951 "interpreter.ml" 106 2934 2955
+)
+"interpreter.ml" 115 3145 3165 "interpreter.ml" 115 3145 3173
+type(
+  Ast.position
+)
+"interpreter.ml" 115 3145 3175 "interpreter.ml" 115 3145 3189
+type(
+  'a -> Ast.node_expr -> value
+)
+ident(
+  int_ref interpret_expr "interpreter.ml" 68 1967 1975 "interpreter.ml" 68 1967 1989
+)
+"interpreter.ml" 115 3145 3190 "interpreter.ml" 115 3145 3193
+type(
+  'a
+)
+ident(
+  int_ref env "interpreter.ml" 68 1967 1990 "interpreter.ml" 68 1967 1993
+)
+"interpreter.ml" 115 3145 3194 "interpreter.ml" 115 3145 3198
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp1 "interpreter.ml" 106 2934 2951 "interpreter.ml" 106 2934 2955
+)
+"interpreter.ml" 115 3145 3174 "interpreter.ml" 115 3145 3199
+call(
+  stack
+)
+type(
+  value
+)
+"interpreter.ml" 115 3145 3157 "interpreter.ml" 115 3145 3199
+call(
+  stack
+)
+type(
+  int
+)
+"interpreter.ml" 116 3200 3207 "interpreter.ml" 116 3200 3209
+type(
+  int
+)
+ident(
+  def e2 "interpreter.ml" 118 3261 3264 "interpreter.ml" 118 3261 3276
+)
+"interpreter.ml" 116 3200 3212 "interpreter.ml" 116 3200 3219
+type(
+  Ast.position -> value -> int
+)
+ident(
+  int_ref get_int "interpreter.ml" 45 1396 1400 "interpreter.ml" 45 1396 1407
+)
+"interpreter.ml" 116 3200 3220 "interpreter.ml" 116 3200 3224
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp2 "interpreter.ml" 106 2934 2956 "interpreter.ml" 106 2934 2960
+)
+"interpreter.ml" 116 3200 3220 "interpreter.ml" 116 3200 3228
+type(
+  Ast.position
+)
+"interpreter.ml" 116 3200 3230 "interpreter.ml" 116 3200 3244
+type(
+  'a -> Ast.node_expr -> value
+)
+ident(
+  int_ref interpret_expr "interpreter.ml" 68 1967 1975 "interpreter.ml" 68 1967 1989
+)
+"interpreter.ml" 116 3200 3245 "interpreter.ml" 116 3200 3248
+type(
+  'a
+)
+ident(
+  int_ref env "interpreter.ml" 68 1967 1990 "interpreter.ml" 68 1967 1993
+)
+"interpreter.ml" 116 3200 3249 "interpreter.ml" 116 3200 3253
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp2 "interpreter.ml" 106 2934 2956 "interpreter.ml" 106 2934 2960
+)
+"interpreter.ml" 116 3200 3229 "interpreter.ml" 116 3200 3254
+call(
+  stack
+)
+type(
+  value
+)
+"interpreter.ml" 116 3200 3212 "interpreter.ml" 116 3200 3254
+call(
+  stack
+)
+type(
+  int
+)
+"interpreter.ml" 118 3261 3270 "interpreter.ml" 118 3261 3272
+type(
+  int
+)
+ident(
+  int_ref e1 "interpreter.ml" 115 3145 3152 "interpreter.ml" 115 3145 3154
+)
+"interpreter.ml" 118 3261 3272 "interpreter.ml" 118 3261 3273
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"interpreter.ml" 118 3261 3273 "interpreter.ml" 118 3261 3275
+type(
+  int
+)
+ident(
+  int_ref e2 "interpreter.ml" 116 3200 3207 "interpreter.ml" 116 3200 3209
+)
+"interpreter.ml" 118 3261 3269 "interpreter.ml" 118 3261 3276
+type(
+  int
+)
+"interpreter.ml" 118 3261 3264 "interpreter.ml" 118 3261 3276
+type(
+  value
+)
+"interpreter.ml" 115 3145 3148 "interpreter.ml" 118 3261 3276
+type(
+  value
+)
+"interpreter.ml" 120 3283 3285 "interpreter.ml" 120 3283 3289
+type(
+  Ast.binop
+)
+"interpreter.ml" 121 3293 3300 "interpreter.ml" 121 3293 3302
+type(
+  int
+)
+ident(
+  def e1 "interpreter.ml" 124 3409 3412 "interpreter.ml" 124 3409 3424
+)
+"interpreter.ml" 121 3293 3305 "interpreter.ml" 121 3293 3312
+type(
+  Ast.position -> value -> int
+)
+ident(
+  int_ref get_int "interpreter.ml" 45 1396 1400 "interpreter.ml" 45 1396 1407
+)
+"interpreter.ml" 121 3293 3313 "interpreter.ml" 121 3293 3317
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp1 "interpreter.ml" 106 2934 2951 "interpreter.ml" 106 2934 2955
+)
+"interpreter.ml" 121 3293 3313 "interpreter.ml" 121 3293 3321
+type(
+  Ast.position
+)
+"interpreter.ml" 121 3293 3323 "interpreter.ml" 121 3293 3337
+type(
+  'a -> Ast.node_expr -> value
+)
+ident(
+  int_ref interpret_expr "interpreter.ml" 68 1967 1975 "interpreter.ml" 68 1967 1989
+)
+"interpreter.ml" 121 3293 3338 "interpreter.ml" 121 3293 3341
+type(
+  'a
+)
+ident(
+  int_ref env "interpreter.ml" 68 1967 1990 "interpreter.ml" 68 1967 1993
+)
+"interpreter.ml" 121 3293 3342 "interpreter.ml" 121 3293 3346
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp1 "interpreter.ml" 106 2934 2951 "interpreter.ml" 106 2934 2955
+)
+"interpreter.ml" 121 3293 3322 "interpreter.ml" 121 3293 3347
+call(
+  stack
+)
+type(
+  value
+)
+"interpreter.ml" 121 3293 3305 "interpreter.ml" 121 3293 3347
+call(
+  stack
+)
+type(
+  int
+)
+"interpreter.ml" 122 3348 3355 "interpreter.ml" 122 3348 3357
+type(
+  int
+)
+ident(
+  def e2 "interpreter.ml" 124 3409 3412 "interpreter.ml" 124 3409 3424
+)
+"interpreter.ml" 122 3348 3360 "interpreter.ml" 122 3348 3367
+type(
+  Ast.position -> value -> int
+)
+ident(
+  int_ref get_int "interpreter.ml" 45 1396 1400 "interpreter.ml" 45 1396 1407
+)
+"interpreter.ml" 122 3348 3368 "interpreter.ml" 122 3348 3372
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp2 "interpreter.ml" 106 2934 2956 "interpreter.ml" 106 2934 2960
+)
+"interpreter.ml" 122 3348 3368 "interpreter.ml" 122 3348 3376
+type(
+  Ast.position
+)
+"interpreter.ml" 122 3348 3378 "interpreter.ml" 122 3348 3392
+type(
+  'a -> Ast.node_expr -> value
+)
+ident(
+  int_ref interpret_expr "interpreter.ml" 68 1967 1975 "interpreter.ml" 68 1967 1989
+)
+"interpreter.ml" 122 3348 3393 "interpreter.ml" 122 3348 3396
+type(
+  'a
+)
+ident(
+  int_ref env "interpreter.ml" 68 1967 1990 "interpreter.ml" 68 1967 1993
+)
+"interpreter.ml" 122 3348 3397 "interpreter.ml" 122 3348 3401
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp2 "interpreter.ml" 106 2934 2956 "interpreter.ml" 106 2934 2960
+)
+"interpreter.ml" 122 3348 3377 "interpreter.ml" 122 3348 3402
+call(
+  stack
+)
+type(
+  value
+)
+"interpreter.ml" 122 3348 3360 "interpreter.ml" 122 3348 3402
+call(
+  stack
+)
+type(
+  int
+)
+"interpreter.ml" 124 3409 3418 "interpreter.ml" 124 3409 3420
+type(
+  int
+)
+ident(
+  int_ref e1 "interpreter.ml" 121 3293 3300 "interpreter.ml" 121 3293 3302
+)
+"interpreter.ml" 124 3409 3420 "interpreter.ml" 124 3409 3421
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( / )
+)
+"interpreter.ml" 124 3409 3421 "interpreter.ml" 124 3409 3423
+type(
+  int
+)
+ident(
+  int_ref e2 "interpreter.ml" 122 3348 3355 "interpreter.ml" 122 3348 3357
+)
+"interpreter.ml" 124 3409 3417 "interpreter.ml" 124 3409 3424
+type(
+  int
+)
+"interpreter.ml" 124 3409 3412 "interpreter.ml" 124 3409 3424
+type(
+  value
+)
+"interpreter.ml" 121 3293 3296 "interpreter.ml" 124 3409 3424
+type(
+  value
+)
+"interpreter.ml" 126 3431 3434 "interpreter.ml" 126 3431 3438
+type(
+  Ast.binop
+)
+"interpreter.ml" 127 3442 3449 "interpreter.ml" 127 3442 3451
+type(
+  int
+)
+ident(
+  def e1 "interpreter.ml" 130 3558 3561 "interpreter.ml" 130 3558 3573
+)
+"interpreter.ml" 127 3442 3454 "interpreter.ml" 127 3442 3461
+type(
+  Ast.position -> value -> int
+)
+ident(
+  int_ref get_int "interpreter.ml" 45 1396 1400 "interpreter.ml" 45 1396 1407
+)
+"interpreter.ml" 127 3442 3462 "interpreter.ml" 127 3442 3466
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp1 "interpreter.ml" 106 2934 2951 "interpreter.ml" 106 2934 2955
+)
+"interpreter.ml" 127 3442 3462 "interpreter.ml" 127 3442 3470
+type(
+  Ast.position
+)
+"interpreter.ml" 127 3442 3472 "interpreter.ml" 127 3442 3486
+type(
+  'a -> Ast.node_expr -> value
+)
+ident(
+  int_ref interpret_expr "interpreter.ml" 68 1967 1975 "interpreter.ml" 68 1967 1989
+)
+"interpreter.ml" 127 3442 3487 "interpreter.ml" 127 3442 3490
+type(
+  'a
+)
+ident(
+  int_ref env "interpreter.ml" 68 1967 1990 "interpreter.ml" 68 1967 1993
+)
+"interpreter.ml" 127 3442 3491 "interpreter.ml" 127 3442 3495
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp1 "interpreter.ml" 106 2934 2951 "interpreter.ml" 106 2934 2955
+)
+"interpreter.ml" 127 3442 3471 "interpreter.ml" 127 3442 3496
+call(
+  stack
+)
+type(
+  value
+)
+"interpreter.ml" 127 3442 3454 "interpreter.ml" 127 3442 3496
+call(
+  stack
+)
+type(
+  int
+)
+"interpreter.ml" 128 3497 3504 "interpreter.ml" 128 3497 3506
+type(
+  int
+)
+ident(
+  def e2 "interpreter.ml" 130 3558 3561 "interpreter.ml" 130 3558 3573
+)
+"interpreter.ml" 128 3497 3509 "interpreter.ml" 128 3497 3516
+type(
+  Ast.position -> value -> int
+)
+ident(
+  int_ref get_int "interpreter.ml" 45 1396 1400 "interpreter.ml" 45 1396 1407
+)
+"interpreter.ml" 128 3497 3517 "interpreter.ml" 128 3497 3521
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp2 "interpreter.ml" 106 2934 2956 "interpreter.ml" 106 2934 2960
+)
+"interpreter.ml" 128 3497 3517 "interpreter.ml" 128 3497 3525
+type(
+  Ast.position
+)
+"interpreter.ml" 128 3497 3527 "interpreter.ml" 128 3497 3541
+type(
+  'a -> Ast.node_expr -> value
+)
+ident(
+  int_ref interpret_expr "interpreter.ml" 68 1967 1975 "interpreter.ml" 68 1967 1989
+)
+"interpreter.ml" 128 3497 3542 "interpreter.ml" 128 3497 3545
+type(
+  'a
+)
+ident(
+  int_ref env "interpreter.ml" 68 1967 1990 "interpreter.ml" 68 1967 1993
+)
+"interpreter.ml" 128 3497 3546 "interpreter.ml" 128 3497 3550
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp2 "interpreter.ml" 106 2934 2956 "interpreter.ml" 106 2934 2960
+)
+"interpreter.ml" 128 3497 3526 "interpreter.ml" 128 3497 3551
+call(
+  stack
+)
+type(
+  value
+)
+"interpreter.ml" 128 3497 3509 "interpreter.ml" 128 3497 3551
+call(
+  stack
+)
+type(
+  int
+)
+"interpreter.ml" 130 3558 3567 "interpreter.ml" 130 3558 3569
+type(
+  int
+)
+ident(
+  int_ref e1 "interpreter.ml" 127 3442 3449 "interpreter.ml" 127 3442 3451
+)
+"interpreter.ml" 130 3558 3569 "interpreter.ml" 130 3558 3570
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( * )
+)
+"interpreter.ml" 130 3558 3570 "interpreter.ml" 130 3558 3572
+type(
+  int
+)
+ident(
+  int_ref e2 "interpreter.ml" 128 3497 3504 "interpreter.ml" 128 3497 3506
+)
+"interpreter.ml" 130 3558 3566 "interpreter.ml" 130 3558 3573
+type(
+  int
+)
+"interpreter.ml" 130 3558 3561 "interpreter.ml" 130 3558 3573
+type(
+  value
+)
+"interpreter.ml" 127 3442 3445 "interpreter.ml" 130 3558 3573
+type(
+  value
+)
+"interpreter.ml" 132 3575 3578 "interpreter.ml" 132 3575 3581
+type(
+  Ast.binop
+)
+"interpreter.ml" 133 3585 3592 "interpreter.ml" 133 3585 3594
+type(
+  value
+)
+ident(
+  def e1 "interpreter.ml" 137 3671 3674 "interpreter.ml" 146 3992 4009
+)
+"interpreter.ml" 133 3585 3598 "interpreter.ml" 133 3585 3612
+type(
+  'a -> Ast.node_expr -> value
+)
+ident(
+  int_ref interpret_expr "interpreter.ml" 68 1967 1975 "interpreter.ml" 68 1967 1989
+)
+"interpreter.ml" 133 3585 3613 "interpreter.ml" 133 3585 3616
+type(
+  'a
+)
+ident(
+  int_ref env "interpreter.ml" 68 1967 1990 "interpreter.ml" 68 1967 1993
+)
+"interpreter.ml" 133 3585 3617 "interpreter.ml" 133 3585 3621
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp1 "interpreter.ml" 106 2934 2951 "interpreter.ml" 106 2934 2955
+)
+"interpreter.ml" 133 3585 3597 "interpreter.ml" 133 3585 3622
+call(
+  stack
+)
+type(
+  value
+)
+"interpreter.ml" 134 3623 3630 "interpreter.ml" 134 3623 3632
+type(
+  value
+)
+ident(
+  def e2 "interpreter.ml" 137 3671 3674 "interpreter.ml" 146 3992 4009
+)
+"interpreter.ml" 134 3623 3636 "interpreter.ml" 134 3623 3650
+type(
+  'a -> Ast.node_expr -> value
+)
+ident(
+  int_ref interpret_expr "interpreter.ml" 68 1967 1975 "interpreter.ml" 68 1967 1989
+)
+"interpreter.ml" 134 3623 3651 "interpreter.ml" 134 3623 3654
+type(
+  'a
+)
+ident(
+  int_ref env "interpreter.ml" 68 1967 1990 "interpreter.ml" 68 1967 1993
+)
+"interpreter.ml" 134 3623 3655 "interpreter.ml" 134 3623 3659
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp2 "interpreter.ml" 106 2934 2956 "interpreter.ml" 106 2934 2960
+)
+"interpreter.ml" 134 3623 3635 "interpreter.ml" 134 3623 3660
+call(
+  stack
+)
+type(
+  value
+)
+"interpreter.ml" 137 3671 3679 "interpreter.ml" 137 3671 3686
+type(
+  value -> bool
+)
+ident(
+  int_ref is_bool "interpreter.ml" 51 1493 1497 "interpreter.ml" 51 1493 1504
+)
+"interpreter.ml" 137 3671 3687 "interpreter.ml" 137 3671 3689
+type(
+  value
+)
+ident(
+  int_ref e1 "interpreter.ml" 133 3585 3592 "interpreter.ml" 133 3585 3594
+)
+"interpreter.ml" 137 3671 3678 "interpreter.ml" 137 3671 3690
+call(
+  stack
+)
+type(
+  bool
+)
+"interpreter.ml" 137 3671 3691 "interpreter.ml" 137 3671 3693
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"interpreter.ml" 137 3671 3695 "interpreter.ml" 137 3671 3702
+type(
+  value -> bool
+)
+ident(
+  int_ref is_bool "interpreter.ml" 51 1493 1497 "interpreter.ml" 51 1493 1504
+)
+"interpreter.ml" 137 3671 3703 "interpreter.ml" 137 3671 3705
+type(
+  value
+)
+ident(
+  int_ref e2 "interpreter.ml" 134 3623 3630 "interpreter.ml" 134 3623 3632
+)
+"interpreter.ml" 137 3671 3694 "interpreter.ml" 137 3671 3706
+call(
+  stack
+)
+type(
+  bool
+)
+"interpreter.ml" 137 3671 3677 "interpreter.ml" 137 3671 3707
+type(
+  bool
+)
+"interpreter.ml" 138 3713 3724 "interpreter.ml" 138 3713 3730
+type(
+  bool
+)
+ident(
+  def e1bool "interpreter.ml" 140 3795 3805 "interpreter.ml" 140 3795 3828
+)
+"interpreter.ml" 138 3713 3733 "interpreter.ml" 138 3713 3741
+type(
+  Ast.position -> value -> bool
+)
+ident(
+  int_ref get_bool "interpreter.ml" 39 1285 1289 "interpreter.ml" 39 1285 1297
+)
+"interpreter.ml" 138 3713 3742 "interpreter.ml" 138 3713 3746
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp1 "interpreter.ml" 106 2934 2951 "interpreter.ml" 106 2934 2955
+)
+"interpreter.ml" 138 3713 3742 "interpreter.ml" 138 3713 3750
+type(
+  Ast.position
+)
+"interpreter.ml" 138 3713 3751 "interpreter.ml" 138 3713 3753
+type(
+  value
+)
+ident(
+  int_ref e1 "interpreter.ml" 133 3585 3592 "interpreter.ml" 133 3585 3594
+)
+"interpreter.ml" 138 3713 3733 "interpreter.ml" 138 3713 3753
+call(
+  stack
+)
+type(
+  bool
+)
+"interpreter.ml" 139 3754 3765 "interpreter.ml" 139 3754 3771
+type(
+  bool
+)
+ident(
+  def e2bool "interpreter.ml" 140 3795 3805 "interpreter.ml" 140 3795 3828
+)
+"interpreter.ml" 139 3754 3774 "interpreter.ml" 139 3754 3782
+type(
+  Ast.position -> value -> bool
+)
+ident(
+  int_ref get_bool "interpreter.ml" 39 1285 1289 "interpreter.ml" 39 1285 1297
+)
+"interpreter.ml" 139 3754 3783 "interpreter.ml" 139 3754 3787
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp2 "interpreter.ml" 106 2934 2956 "interpreter.ml" 106 2934 2960
+)
+"interpreter.ml" 139 3754 3783 "interpreter.ml" 139 3754 3791
+type(
+  Ast.position
+)
+"interpreter.ml" 139 3754 3792 "interpreter.ml" 139 3754 3794
+type(
+  value
+)
+ident(
+  int_ref e2 "interpreter.ml" 134 3623 3630 "interpreter.ml" 134 3623 3632
+)
+"interpreter.ml" 139 3754 3774 "interpreter.ml" 139 3754 3794
+call(
+  stack
+)
+type(
+  bool
+)
+"interpreter.ml" 140 3795 3812 "interpreter.ml" 140 3795 3818
+type(
+  bool
+)
+ident(
+  int_ref e1bool "interpreter.ml" 138 3713 3724 "interpreter.ml" 138 3713 3730
+)
+"interpreter.ml" 140 3795 3819 "interpreter.ml" 140 3795 3820
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"interpreter.ml" 140 3795 3821 "interpreter.ml" 140 3795 3827
+type(
+  bool
+)
+ident(
+  int_ref e2bool "interpreter.ml" 139 3754 3765 "interpreter.ml" 139 3754 3771
+)
+"interpreter.ml" 140 3795 3811 "interpreter.ml" 140 3795 3828
+type(
+  bool
+)
+"interpreter.ml" 140 3795 3805 "interpreter.ml" 140 3795 3828
+type(
+  value
+)
+"interpreter.ml" 138 3713 3720 "interpreter.ml" 140 3795 3828
+type(
+  value
+)
+"interpreter.ml" 141 3829 3842 "interpreter.ml" 141 3829 3848
+type(
+  value -> bool
+)
+ident(
+  int_ref is_int "interpreter.ml" 56 1564 1568 "interpreter.ml" 56 1564 1574
+)
+"interpreter.ml" 141 3829 3849 "interpreter.ml" 141 3829 3851
+type(
+  value
+)
+ident(
+  int_ref e1 "interpreter.ml" 133 3585 3592 "interpreter.ml" 133 3585 3594
+)
+"interpreter.ml" 141 3829 3841 "interpreter.ml" 141 3829 3852
+call(
+  stack
+)
+type(
+  bool
+)
+"interpreter.ml" 141 3829 3853 "interpreter.ml" 141 3829 3855
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"interpreter.ml" 141 3829 3857 "interpreter.ml" 141 3829 3863
+type(
+  value -> bool
+)
+ident(
+  int_ref is_int "interpreter.ml" 56 1564 1568 "interpreter.ml" 56 1564 1574
+)
+"interpreter.ml" 141 3829 3864 "interpreter.ml" 141 3829 3866
+type(
+  value
+)
+ident(
+  int_ref e2 "interpreter.ml" 134 3623 3630 "interpreter.ml" 134 3623 3632
+)
+"interpreter.ml" 141 3829 3856 "interpreter.ml" 141 3829 3867
+call(
+  stack
+)
+type(
+  bool
+)
+"interpreter.ml" 141 3829 3840 "interpreter.ml" 141 3829 3868
+type(
+  bool
+)
+"interpreter.ml" 142 3874 3885 "interpreter.ml" 142 3874 3890
+type(
+  int
+)
+ident(
+  def e1int "interpreter.ml" 144 3952 3962 "interpreter.ml" 144 3952 3983
+)
+"interpreter.ml" 142 3874 3893 "interpreter.ml" 142 3874 3900
+type(
+  Ast.position -> value -> int
+)
+ident(
+  int_ref get_int "interpreter.ml" 45 1396 1400 "interpreter.ml" 45 1396 1407
+)
+"interpreter.ml" 142 3874 3901 "interpreter.ml" 142 3874 3905
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp1 "interpreter.ml" 106 2934 2951 "interpreter.ml" 106 2934 2955
+)
+"interpreter.ml" 142 3874 3901 "interpreter.ml" 142 3874 3909
+type(
+  Ast.position
+)
+"interpreter.ml" 142 3874 3910 "interpreter.ml" 142 3874 3912
+type(
+  value
+)
+ident(
+  int_ref e1 "interpreter.ml" 133 3585 3592 "interpreter.ml" 133 3585 3594
+)
+"interpreter.ml" 142 3874 3893 "interpreter.ml" 142 3874 3912
+call(
+  stack
+)
+type(
+  int
+)
+"interpreter.ml" 143 3913 3924 "interpreter.ml" 143 3913 3929
+type(
+  int
+)
+ident(
+  def e2int "interpreter.ml" 144 3952 3962 "interpreter.ml" 144 3952 3983
+)
+"interpreter.ml" 143 3913 3932 "interpreter.ml" 143 3913 3939
+type(
+  Ast.position -> value -> int
+)
+ident(
+  int_ref get_int "interpreter.ml" 45 1396 1400 "interpreter.ml" 45 1396 1407
+)
+"interpreter.ml" 143 3913 3940 "interpreter.ml" 143 3913 3944
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp2 "interpreter.ml" 106 2934 2956 "interpreter.ml" 106 2934 2960
+)
+"interpreter.ml" 143 3913 3940 "interpreter.ml" 143 3913 3948
+type(
+  Ast.position
+)
+"interpreter.ml" 143 3913 3949 "interpreter.ml" 143 3913 3951
+type(
+  value
+)
+ident(
+  int_ref e2 "interpreter.ml" 134 3623 3630 "interpreter.ml" 134 3623 3632
+)
+"interpreter.ml" 143 3913 3932 "interpreter.ml" 143 3913 3951
+call(
+  stack
+)
+type(
+  int
+)
+"interpreter.ml" 144 3952 3969 "interpreter.ml" 144 3952 3974
+type(
+  int
+)
+ident(
+  int_ref e1int "interpreter.ml" 142 3874 3885 "interpreter.ml" 142 3874 3890
+)
+"interpreter.ml" 144 3952 3975 "interpreter.ml" 144 3952 3976
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"interpreter.ml" 144 3952 3977 "interpreter.ml" 144 3952 3982
+type(
+  int
+)
+ident(
+  int_ref e2int "interpreter.ml" 143 3913 3924 "interpreter.ml" 143 3913 3929
+)
+"interpreter.ml" 144 3952 3968 "interpreter.ml" 144 3952 3983
+type(
+  bool
+)
+"interpreter.ml" 144 3952 3962 "interpreter.ml" 144 3952 3983
+type(
+  value
+)
+"interpreter.ml" 142 3874 3881 "interpreter.ml" 144 3952 3983
+type(
+  value
+)
+"interpreter.ml" 146 3992 3997 "interpreter.ml" 146 3992 4009
+type(
+  value
+)
+"interpreter.ml" 141 3829 3837 "interpreter.ml" 146 3992 4009
+type(
+  value
+)
+"interpreter.ml" 137 3671 3674 "interpreter.ml" 146 3992 4009
+type(
+  value
+)
+"interpreter.ml" 133 3585 3588 "interpreter.ml" 146 3992 4009
+type(
+  value
+)
+"interpreter.ml" 148 4011 4013 "interpreter.ml" 148 4011 4017
+type(
+  Ast.binop
+)
+"interpreter.ml" 149 4021 4028 "interpreter.ml" 149 4021 4030
+type(
+  value
+)
+ident(
+  def e1 "interpreter.ml" 153 4107 4110 "interpreter.ml" 162 4430 4447
+)
+"interpreter.ml" 149 4021 4034 "interpreter.ml" 149 4021 4048
+type(
+  'a -> Ast.node_expr -> value
+)
+ident(
+  int_ref interpret_expr "interpreter.ml" 68 1967 1975 "interpreter.ml" 68 1967 1989
+)
+"interpreter.ml" 149 4021 4049 "interpreter.ml" 149 4021 4052
+type(
+  'a
+)
+ident(
+  int_ref env "interpreter.ml" 68 1967 1990 "interpreter.ml" 68 1967 1993
+)
+"interpreter.ml" 149 4021 4053 "interpreter.ml" 149 4021 4057
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp1 "interpreter.ml" 106 2934 2951 "interpreter.ml" 106 2934 2955
+)
+"interpreter.ml" 149 4021 4033 "interpreter.ml" 149 4021 4058
+call(
+  stack
+)
+type(
+  value
+)
+"interpreter.ml" 150 4059 4066 "interpreter.ml" 150 4059 4068
+type(
+  value
+)
+ident(
+  def e2 "interpreter.ml" 153 4107 4110 "interpreter.ml" 162 4430 4447
+)
+"interpreter.ml" 150 4059 4072 "interpreter.ml" 150 4059 4086
+type(
+  'a -> Ast.node_expr -> value
+)
+ident(
+  int_ref interpret_expr "interpreter.ml" 68 1967 1975 "interpreter.ml" 68 1967 1989
+)
+"interpreter.ml" 150 4059 4087 "interpreter.ml" 150 4059 4090
+type(
+  'a
+)
+ident(
+  int_ref env "interpreter.ml" 68 1967 1990 "interpreter.ml" 68 1967 1993
+)
+"interpreter.ml" 150 4059 4091 "interpreter.ml" 150 4059 4095
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp2 "interpreter.ml" 106 2934 2956 "interpreter.ml" 106 2934 2960
+)
+"interpreter.ml" 150 4059 4071 "interpreter.ml" 150 4059 4096
+call(
+  stack
+)
+type(
+  value
+)
+"interpreter.ml" 153 4107 4115 "interpreter.ml" 153 4107 4122
+type(
+  value -> bool
+)
+ident(
+  int_ref is_bool "interpreter.ml" 51 1493 1497 "interpreter.ml" 51 1493 1504
+)
+"interpreter.ml" 153 4107 4123 "interpreter.ml" 153 4107 4125
+type(
+  value
+)
+ident(
+  int_ref e1 "interpreter.ml" 149 4021 4028 "interpreter.ml" 149 4021 4030
+)
+"interpreter.ml" 153 4107 4114 "interpreter.ml" 153 4107 4126
+call(
+  stack
+)
+type(
+  bool
+)
+"interpreter.ml" 153 4107 4127 "interpreter.ml" 153 4107 4129
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"interpreter.ml" 153 4107 4131 "interpreter.ml" 153 4107 4138
+type(
+  value -> bool
+)
+ident(
+  int_ref is_bool "interpreter.ml" 51 1493 1497 "interpreter.ml" 51 1493 1504
+)
+"interpreter.ml" 153 4107 4139 "interpreter.ml" 153 4107 4141
+type(
+  value
+)
+ident(
+  int_ref e2 "interpreter.ml" 150 4059 4066 "interpreter.ml" 150 4059 4068
+)
+"interpreter.ml" 153 4107 4130 "interpreter.ml" 153 4107 4142
+call(
+  stack
+)
+type(
+  bool
+)
+"interpreter.ml" 153 4107 4113 "interpreter.ml" 153 4107 4143
+type(
+  bool
+)
+"interpreter.ml" 154 4149 4160 "interpreter.ml" 154 4149 4166
+type(
+  bool
+)
+ident(
+  def e1bool "interpreter.ml" 156 4231 4241 "interpreter.ml" 156 4231 4265
+)
+"interpreter.ml" 154 4149 4169 "interpreter.ml" 154 4149 4177
+type(
+  Ast.position -> value -> bool
+)
+ident(
+  int_ref get_bool "interpreter.ml" 39 1285 1289 "interpreter.ml" 39 1285 1297
+)
+"interpreter.ml" 154 4149 4178 "interpreter.ml" 154 4149 4182
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp1 "interpreter.ml" 106 2934 2951 "interpreter.ml" 106 2934 2955
+)
+"interpreter.ml" 154 4149 4178 "interpreter.ml" 154 4149 4186
+type(
+  Ast.position
+)
+"interpreter.ml" 154 4149 4187 "interpreter.ml" 154 4149 4189
+type(
+  value
+)
+ident(
+  int_ref e1 "interpreter.ml" 149 4021 4028 "interpreter.ml" 149 4021 4030
+)
+"interpreter.ml" 154 4149 4169 "interpreter.ml" 154 4149 4189
+call(
+  stack
+)
+type(
+  bool
+)
+"interpreter.ml" 155 4190 4201 "interpreter.ml" 155 4190 4207
+type(
+  bool
+)
+ident(
+  def e2bool "interpreter.ml" 156 4231 4241 "interpreter.ml" 156 4231 4265
+)
+"interpreter.ml" 155 4190 4210 "interpreter.ml" 155 4190 4218
+type(
+  Ast.position -> value -> bool
+)
+ident(
+  int_ref get_bool "interpreter.ml" 39 1285 1289 "interpreter.ml" 39 1285 1297
+)
+"interpreter.ml" 155 4190 4219 "interpreter.ml" 155 4190 4223
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp2 "interpreter.ml" 106 2934 2956 "interpreter.ml" 106 2934 2960
+)
+"interpreter.ml" 155 4190 4219 "interpreter.ml" 155 4190 4227
+type(
+  Ast.position
+)
+"interpreter.ml" 155 4190 4228 "interpreter.ml" 155 4190 4230
+type(
+  value
+)
+ident(
+  int_ref e2 "interpreter.ml" 150 4059 4066 "interpreter.ml" 150 4059 4068
+)
+"interpreter.ml" 155 4190 4210 "interpreter.ml" 155 4190 4230
+call(
+  stack
+)
+type(
+  bool
+)
+"interpreter.ml" 156 4231 4248 "interpreter.ml" 156 4231 4254
+type(
+  bool
+)
+ident(
+  int_ref e1bool "interpreter.ml" 154 4149 4160 "interpreter.ml" 154 4149 4166
+)
+"interpreter.ml" 156 4231 4255 "interpreter.ml" 156 4231 4257
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"interpreter.ml" 156 4231 4258 "interpreter.ml" 156 4231 4264
+type(
+  bool
+)
+ident(
+  int_ref e2bool "interpreter.ml" 155 4190 4201 "interpreter.ml" 155 4190 4207
+)
+"interpreter.ml" 156 4231 4247 "interpreter.ml" 156 4231 4265
+type(
+  bool
+)
+"interpreter.ml" 156 4231 4241 "interpreter.ml" 156 4231 4265
+type(
+  value
+)
+"interpreter.ml" 154 4149 4156 "interpreter.ml" 156 4231 4265
+type(
+  value
+)
+"interpreter.ml" 157 4266 4279 "interpreter.ml" 157 4266 4285
+type(
+  value -> bool
+)
+ident(
+  int_ref is_int "interpreter.ml" 56 1564 1568 "interpreter.ml" 56 1564 1574
+)
+"interpreter.ml" 157 4266 4286 "interpreter.ml" 157 4266 4288
+type(
+  value
+)
+ident(
+  int_ref e1 "interpreter.ml" 149 4021 4028 "interpreter.ml" 149 4021 4030
+)
+"interpreter.ml" 157 4266 4278 "interpreter.ml" 157 4266 4289
+call(
+  stack
+)
+type(
+  bool
+)
+"interpreter.ml" 157 4266 4290 "interpreter.ml" 157 4266 4292
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"interpreter.ml" 157 4266 4294 "interpreter.ml" 157 4266 4300
+type(
+  value -> bool
+)
+ident(
+  int_ref is_int "interpreter.ml" 56 1564 1568 "interpreter.ml" 56 1564 1574
+)
+"interpreter.ml" 157 4266 4301 "interpreter.ml" 157 4266 4303
+type(
+  value
+)
+ident(
+  int_ref e2 "interpreter.ml" 150 4059 4066 "interpreter.ml" 150 4059 4068
+)
+"interpreter.ml" 157 4266 4293 "interpreter.ml" 157 4266 4304
+call(
+  stack
+)
+type(
+  bool
+)
+"interpreter.ml" 157 4266 4277 "interpreter.ml" 157 4266 4305
+type(
+  bool
+)
+"interpreter.ml" 158 4311 4322 "interpreter.ml" 158 4311 4327
+type(
+  int
+)
+ident(
+  def e1int "interpreter.ml" 160 4389 4399 "interpreter.ml" 160 4389 4421
+)
+"interpreter.ml" 158 4311 4330 "interpreter.ml" 158 4311 4337
+type(
+  Ast.position -> value -> int
+)
+ident(
+  int_ref get_int "interpreter.ml" 45 1396 1400 "interpreter.ml" 45 1396 1407
+)
+"interpreter.ml" 158 4311 4338 "interpreter.ml" 158 4311 4342
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp1 "interpreter.ml" 106 2934 2951 "interpreter.ml" 106 2934 2955
+)
+"interpreter.ml" 158 4311 4338 "interpreter.ml" 158 4311 4346
+type(
+  Ast.position
+)
+"interpreter.ml" 158 4311 4347 "interpreter.ml" 158 4311 4349
+type(
+  value
+)
+ident(
+  int_ref e1 "interpreter.ml" 149 4021 4028 "interpreter.ml" 149 4021 4030
+)
+"interpreter.ml" 158 4311 4330 "interpreter.ml" 158 4311 4349
+call(
+  stack
+)
+type(
+  int
+)
+"interpreter.ml" 159 4350 4361 "interpreter.ml" 159 4350 4366
+type(
+  int
+)
+ident(
+  def e2int "interpreter.ml" 160 4389 4399 "interpreter.ml" 160 4389 4421
+)
+"interpreter.ml" 159 4350 4369 "interpreter.ml" 159 4350 4376
+type(
+  Ast.position -> value -> int
+)
+ident(
+  int_ref get_int "interpreter.ml" 45 1396 1400 "interpreter.ml" 45 1396 1407
+)
+"interpreter.ml" 159 4350 4377 "interpreter.ml" 159 4350 4381
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref exp2 "interpreter.ml" 106 2934 2956 "interpreter.ml" 106 2934 2960
+)
+"interpreter.ml" 159 4350 4377 "interpreter.ml" 159 4350 4385
+type(
+  Ast.position
+)
+"interpreter.ml" 159 4350 4386 "interpreter.ml" 159 4350 4388
+type(
+  value
+)
+ident(
+  int_ref e2 "interpreter.ml" 150 4059 4066 "interpreter.ml" 150 4059 4068
+)
+"interpreter.ml" 159 4350 4369 "interpreter.ml" 159 4350 4388
+call(
+  stack
+)
+type(
+  int
+)
+"interpreter.ml" 160 4389 4406 "interpreter.ml" 160 4389 4411
+type(
+  int
+)
+ident(
+  int_ref e1int "interpreter.ml" 158 4311 4322 "interpreter.ml" 158 4311 4327
+)
+"interpreter.ml" 160 4389 4412 "interpreter.ml" 160 4389 4414
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"interpreter.ml" 160 4389 4415 "interpreter.ml" 160 4389 4420
+type(
+  int
+)
+ident(
+  int_ref e2int "interpreter.ml" 159 4350 4361 "interpreter.ml" 159 4350 4366
+)
+"interpreter.ml" 160 4389 4405 "interpreter.ml" 160 4389 4421
+type(
+  bool
+)
+"interpreter.ml" 160 4389 4399 "interpreter.ml" 160 4389 4421
+type(
+  value
+)
+"interpreter.ml" 158 4311 4318 "interpreter.ml" 160 4389 4421
+type(
+  value
+)
+"interpreter.ml" 162 4430 4435 "interpreter.ml" 162 4430 4447
+type(
+  value
+)
+"interpreter.ml" 157 4266 4274 "interpreter.ml" 162 4430 4447
+type(
+  value
+)
+"interpreter.ml" 153 4107 4110 "interpreter.ml" 162 4430 4447
+type(
+  value
+)
+"interpreter.ml" 149 4021 4024 "interpreter.ml" 162 4430 4447
+type(
+  value
+)
+"interpreter.ml" 169 4470 4476 "interpreter.ml" 169 4470 4477
+type(
+  Ast.binop
+)
+"interpreter.ml" 169 4470 4481 "interpreter.ml" 169 4470 4496
 type(
   unit -> value
 )
 ident(
   int_ref not_implemented "interpreter.ml" 4 21 25 "interpreter.ml" 4 21 40
 )
-"interpreter.ml" 65 2048 2075 "interpreter.ml" 65 2048 2077
+"interpreter.ml" 169 4470 4497 "interpreter.ml" 169 4470 4499
 type(
   unit
 )
-"interpreter.ml" 65 2048 2059 "interpreter.ml" 65 2048 2077
+"interpreter.ml" 169 4470 4481 "interpreter.ml" 169 4470 4499
 call(
   tail
 )
 type(
   value
 )
-"interpreter.ml" 53 1755 1757 "interpreter.ml" 65 2048 2077
+"interpreter.ml" 107 2965 2971 "interpreter.ml" 169 4470 4499
 type(
   value
 )
-"interpreter.ml" 75 2378 2382 "interpreter.ml" 75 2378 2396
+"interpreter.ml" 69 1998 2000 "interpreter.ml" 169 4470 4499
+type(
+  value
+)
+"interpreter.ml" 182 4839 4843 "interpreter.ml" 182 4839 4857
 type(
   Ast.prog -> unit
 )
 ident(
-  def interpret_prog "interpreter.ml" 77 2445 2465 "_none_" 1 0 -1
+  def interpret_prog "interpreter.ml" 193 5172 5202 "_none_" 1 0 -1
 )
-"interpreter.ml" 75 2378 2398 "interpreter.ml" 75 2378 2399
+"interpreter.ml" 182 4839 4859 "interpreter.ml" 182 4839 4860
 type(
   Ast.prog
 )
 ident(
-  def p "interpreter.ml" 75 2378 2412 "interpreter.ml" 77 2445 2465
+  def p "interpreter.ml" 182 4839 4873 "interpreter.ml" 193 5172 5202
 )
-"interpreter.ml" 77 2445 2447 "interpreter.ml" 77 2445 2462
+"interpreter.ml" 185 4907 4917 "interpreter.ml" 185 4907 4931
+type(
+  'a -> Ast.instr list -> unit
+)
+ident(
+  def inter_prog_aux "interpreter.ml" 185 4907 4909 "interpreter.ml" 193 5172 5202
+)
+"interpreter.ml" 185 4907 4932 "interpreter.ml" 185 4907 4935
+type(
+  'a
+)
+ident(
+  def env "interpreter.ml" 185 4907 4936 "interpreter.ml" 191 5135 5166
+)
+"interpreter.ml" 185 4907 4936 "interpreter.ml" 185 4907 4937
+type(
+  Ast.instr list
+)
+ident(
+  def p "interpreter.ml" 186 4941 4945 "interpreter.ml" 191 5135 5166
+)
+"interpreter.ml" 186 4941 4951 "interpreter.ml" 186 4941 4952
+type(
+  Ast.instr list
+)
+ident(
+  int_ref p "interpreter.ml" 185 4907 4936 "interpreter.ml" 185 4907 4937
+)
+"interpreter.ml" 187 4958 4966 "interpreter.ml" 187 4958 4968
+type(
+  Ast.instr list
+)
+"interpreter.ml" 187 4958 4972 "interpreter.ml" 187 4958 4985
+type(
+  unit -> unit
+)
+ident(
+  ext_ref Pervasives.print_newline
+)
+"interpreter.ml" 187 4958 4985 "interpreter.ml" 187 4958 4987
+type(
+  unit
+)
+"interpreter.ml" 187 4958 4972 "interpreter.ml" 187 4958 4987
+call(
+  tail
+)
+type(
+  unit
+)
+"interpreter.ml" 188 5008 5025 "interpreter.ml" 188 5008 5026
+type(
+  Ast.node_expr
+)
+ident(
+  def e "interpreter.ml" 189 5036 5037 "interpreter.ml" 190 5107 5134
+)
+"interpreter.ml" 188 5008 5016 "interpreter.ml" 188 5008 5026
+type(
+  Ast.instr
+)
+"interpreter.ml" 188 5008 5030 "interpreter.ml" 188 5008 5032
+type(
+  Ast.instr list
+)
+ident(
+  def tl "interpreter.ml" 189 5036 5037 "interpreter.ml" 190 5107 5134
+)
+"interpreter.ml" 188 5008 5016 "interpreter.ml" 188 5008 5032
+type(
+  Ast.instr list
+)
+"interpreter.ml" 189 5036 5041 "interpreter.ml" 189 5036 5042
+type(
+  value
+)
+"interpreter.ml" 189 5036 5046 "interpreter.ml" 189 5036 5060
+type(
+  'a -> Ast.node_expr -> value
+)
+ident(
+  int_ref interpret_expr "interpreter.ml" 68 1967 1975 "interpreter.ml" 68 1967 1989
+)
+"interpreter.ml" 189 5036 5061 "interpreter.ml" 189 5036 5064
+type(
+  'a
+)
+ident(
+  int_ref env "interpreter.ml" 185 4907 4932 "interpreter.ml" 185 4907 4935
+)
+"interpreter.ml" 189 5036 5065 "interpreter.ml" 189 5036 5066
+type(
+  Ast.node_expr
+)
+ident(
+  int_ref e "interpreter.ml" 188 5008 5025 "interpreter.ml" 188 5008 5026
+)
+"interpreter.ml" 189 5036 5046 "interpreter.ml" 189 5036 5066
+call(
+  stack
+)
+type(
+  value
+)
+"interpreter.ml" 190 5107 5113 "interpreter.ml" 190 5107 5127
+type(
+  'a -> Ast.instr list -> unit
+)
+ident(
+  int_ref inter_prog_aux "interpreter.ml" 185 4907 4917 "interpreter.ml" 185 4907 4931
+)
+"interpreter.ml" 190 5107 5128 "interpreter.ml" 190 5107 5131
+type(
+  'a
+)
+ident(
+  int_ref env "interpreter.ml" 185 4907 4932 "interpreter.ml" 185 4907 4935
+)
+"interpreter.ml" 190 5107 5132 "interpreter.ml" 190 5107 5134
+type(
+  Ast.instr list
+)
+ident(
+  int_ref tl "interpreter.ml" 188 5008 5030 "interpreter.ml" 188 5008 5032
+)
+"interpreter.ml" 190 5107 5113 "interpreter.ml" 190 5107 5134
+call(
+  tail
+)
+type(
+  unit
+)
+"interpreter.ml" 189 5036 5037 "interpreter.ml" 190 5107 5134
+type(
+  unit
+)
+"interpreter.ml" 191 5135 5143 "interpreter.ml" 191 5135 5144
+type(
+  Ast.instr list
+)
+"interpreter.ml" 191 5135 5149 "interpreter.ml" 191 5135 5164
 type(
   unit -> unit
 )
 ident(
   int_ref not_implemented "interpreter.ml" 4 21 25 "interpreter.ml" 4 21 40
 )
-"interpreter.ml" 77 2445 2463 "interpreter.ml" 77 2445 2465
+"interpreter.ml" 191 5135 5164 "interpreter.ml" 191 5135 5166
 type(
   unit
 )
-"interpreter.ml" 77 2445 2447 "interpreter.ml" 77 2445 2465
+"interpreter.ml" 191 5135 5149 "interpreter.ml" 191 5135 5166
+type(
+  unit
+)
+"interpreter.ml" 186 4941 4945 "interpreter.ml" 191 5135 5166
+type(
+  unit
+)
+"interpreter.ml" 193 5172 5174 "interpreter.ml" 193 5172 5188
+type(
+  '_b Env.t -> Ast.prog -> unit
+)
+ident(
+  int_ref inter_prog_aux "interpreter.ml" 185 4907 4917 "interpreter.ml" 185 4907 4931
+)
+"interpreter.ml" 193 5172 5189 "interpreter.ml" 193 5172 5200
+type(
+  '_b Env.t
+)
+ident(
+  ext_ref Env.empty
+)
+"interpreter.ml" 193 5172 5201 "interpreter.ml" 193 5172 5202
+type(
+  Ast.prog
+)
+ident(
+  int_ref p "interpreter.ml" 182 4839 4859 "interpreter.ml" 182 4839 4860
+)
+"interpreter.ml" 193 5172 5174 "interpreter.ml" 193 5172 5202
 call(
   tail
 )
+type(
+  unit
+)
+"interpreter.ml" 185 4907 4909 "interpreter.ml" 193 5172 5202
 type(
   unit
 )

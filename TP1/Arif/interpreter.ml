@@ -1,6 +1,10 @@
 open Ast
 open Error
 
+
+(* Ulysse.gerard@inria.fr *)
+
+
 let not_implemented () = failwith "Not implemented"
 
 (* Les expressions de notre langage calculent des valeurs qui sont soit
@@ -47,6 +51,17 @@ let get_int pos v =
     | Vint b -> b
     | _ -> error Interpretation_error pos
 
+
+let is_bool e =
+  match e with
+    | Vbool e -> true
+    | _ -> false
+
+let is_int e =
+  match e with
+    | Vint e -> true
+    | _ -> false
+
 (* Voici le cœur de l'interpréteur, qu'il va falloir compléter. Cette fonction
    prend en argument un environnement associant des valeurs à des chaînes de
    caractères ainsi qu'une expression de la forme décrite dans [Ast.mli], et
@@ -62,11 +77,99 @@ let rec interpret_expr env e =
       let b = get_bool e.pos (interpret_expr env e) in
       Vbool (not b)
 
+    | Eunop (Uminus, e)   ->
+      let b = get_int e.pos (interpret_expr env e) in
+      Vint (-b)
+
     | Eprint_newline e ->
       let _ = interpret_expr env e in
       print_newline ();
       Vunit
 
+    | Eprint_int e -> 
+      let i = get_int e.pos (interpret_expr env e) in
+      print_int(i);
+      Vunit
+
+    | Econst c ->
+      begin match c with
+	| Cint x ->Vint x
+	| Cbool x -> Vbool x
+	| Cunit -> Vunit
+      end 
+    | Eseq list ->
+      let rec aux list =
+	match list with
+	  | [] -> failwith "Sequence vide"
+	  | [e] -> interpret_expr env e (*Renvoie la valeur du dernier élément *)
+	  | e :: tl ->
+	    let _ = interpret_expr env e in aux tl (* On se moque de la valeur tant que ce n'est pas la dernière *)
+
+      in aux list
+
+    | Ebinop (op,exp1,exp2) ->
+      match op with
+	| Badd ->
+	  let e1 = get_int exp1.pos (interpret_expr env exp1)
+	  and e2 = get_int exp2.pos (interpret_expr env exp2)
+	  in
+	  Vint (e1+e2)
+	    
+	| Bsub ->
+	  let e1 = get_int exp1.pos (interpret_expr env exp1)
+	  and e2 = get_int exp2.pos (interpret_expr env exp2)
+	  in
+	  Vint (e1-e2)
+	    
+	|Bdiv ->
+	  let e1 = get_int exp1.pos (interpret_expr env exp1)
+	  and e2 = get_int exp2.pos (interpret_expr env exp2)
+	  in
+	  Vint (e1/e2)
+	    
+	| Bmul ->
+	  let e1 = get_int exp1.pos (interpret_expr env exp1)
+	  and e2 = get_int exp2.pos (interpret_expr env exp2)
+	  in
+	  Vint (e1*e2)
+
+	| Beq ->
+	  let e1 = (interpret_expr env exp1)
+	  and e2 = (interpret_expr env exp2)
+	  in
+	  
+	  if ((is_bool e1) && (is_bool e2)) then
+	      let e1bool = get_bool exp1.pos e1
+	      and e2bool = get_bool exp2.pos e2
+	      in Vbool (e1bool = e2bool)
+	  else if ((is_int e1) && (is_int e2)) then
+	      let e1int = get_int exp1.pos e1
+	      and e2int = get_int exp2.pos e2
+	      in Vbool (e1int = e2int)
+	  else
+	    assert false
+
+	|Bneq ->
+	  let e1 = (interpret_expr env exp1)
+	  and e2 = (interpret_expr env exp2)
+	  in
+	  
+	  if ((is_bool e1) && (is_bool e2)) then
+	      let e1bool = get_bool exp1.pos e1
+	      and e2bool = get_bool exp2.pos e2
+	      in Vbool (e1bool <> e2bool)
+	  else if ((is_int e1) && (is_int e2)) then
+	      let e1int = get_int exp1.pos e1
+	      and e2int = get_int exp2.pos e2
+	      in Vbool (e1int <> e2int)
+	  else
+	    assert false
+	  
+
+	  
+	 
+		
+      
     | _ -> not_implemented ()
 
 
@@ -76,11 +179,19 @@ let rec interpret_expr env e =
    agir sur l'environnement !
 
    interpret_prog : Ast.prog -> unit
-*)      
+*)
+
+      
+(* P est une liste d'instructions *)
 let interpret_prog (p : Ast.prog) : unit =
   (* À compléter ! *)
-  match p with :
-    | Icompute(exp) ->  interpret_expr 
-    |
-  
-  not_implemented ()
+
+  let rec inter_prog_aux env p  =
+    match p with
+      | [] -> print_newline() (* On a terminé *)
+      | Icompute e :: tl ->
+	let _ =  interpret_expr env e (* On se moque de ce que ça renvoie *)
+	  in inter_prog_aux env tl
+      | _ ->  not_implemented()
+  in
+  inter_prog_aux (Env.empty) p 
